@@ -86,11 +86,11 @@ const partnerships = [
   }
 ];
 
-const mathCourses = [
-  { en: "SAT Math", ko: "Digital SAT 수학 대비", text: "출제 유형 분석과 시간 관리 전략으로 목표 점수까지 준비합니다." },
-  { en: "AP Calculus AB / BC", ko: "AP 미적분", text: "개념 이해와 Free Response 서술 연습을 함께 진행합니다." },
-  { en: "Algebra · Geometry · Precalculus", ko: "학교 수학 내신", text: "미국 학교 커리큘럼에 맞춰 기초부터 탄탄하게 다집니다." },
-  { en: "1:1 Tutoring", ko: "1:1 맞춤 수업", text: "학생 수준과 일정에 맞춘 개별 수업으로 진행합니다." }
+const diagnosisAreas = [
+  { en: "Subject Diagnosis", ko: "과목별 학습 진단", text: "영어·수학·과학·사회 등 과목별로 기초 개념, 학습 습관, 약점을 진단합니다." },
+  { en: "Course Selection", ko: "과목 선택 전략", text: "AP·Honors 과목의 수와 조합을 학생의 실제 역량과 전공 방향에 맞춰 설계합니다." },
+  { en: "Junior Year Readiness", ko: "11학년 대비", text: "AP가 몰리는 11학년 전에 기초와 학습 습관을 먼저 다집니다." },
+  { en: "English & Math Roadmap", ko: "영어·수학 장기 로드맵", text: "단기간에 오르지 않는 두 과목을 학년별 로드맵으로 꾸준히 관리합니다." }
 ];
 
 const contentTests = [
@@ -304,32 +304,35 @@ export default function BoutiqueAdmissionsLandingPage() {
       </section>
 
 
-      <section id="math" className="scroll-mt-8 bg-white px-6 py-24 text-slate-950 lg:px-8">
+      <section id="diagnosis" className="scroll-mt-8 bg-white px-6 py-24 text-slate-950 lg:px-8">
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="grid grid-cols-2 gap-4">
             <div className="col-span-2 overflow-hidden bg-slate-100 sm:col-span-1 sm:row-span-2">
-              <img src="/images/math-point.jpg" alt="수학 수업을 설명하는 David Cho" loading="lazy" className="h-full w-full object-cover object-top" />
+              <img src="/images/math-point.jpg" alt="학생의 학습 상태를 설명하는 David Cho" loading="lazy" className="h-full w-full object-cover object-top" />
             </div>
             <div className="hidden overflow-hidden bg-slate-100 sm:block">
-              <img src="/images/math-notes.jpg" alt="수업 자료를 든 David Cho" loading="lazy" className="aspect-[4/5] h-full w-full object-cover object-top" />
+              <img src="/images/math-notes.jpg" alt="학습 진단 자료를 든 David Cho" loading="lazy" className="aspect-[4/5] h-full w-full object-cover object-top" />
             </div>
             <div className="hidden flex-col justify-end bg-[#1f2d27] p-6 text-white sm:flex">
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-amber-300">1:1 Math</p>
-              <p className="mt-3 text-lg font-semibold leading-snug">개념 이해부터 실전 풀이까지, 직접 지도합니다.</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-amber-300">Diagnosis First</p>
+              <p className="mt-3 text-lg font-semibold leading-snug">과목을 고르기 전에, 학생의 현재 상태부터 정확히 봅니다.</p>
             </div>
           </div>
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-800">Math &amp; Test Prep</p>
-            <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] sm:text-4xl">수학은 미국 대학 입시의 기초 체력입니다</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-800">Academic Diagnosis</p>
+            <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] sm:text-4xl">어떤 과목을, 언제, 어떤 준비로 들을지가 입시를 좌우합니다</h2>
             <p className="mt-5 text-lg leading-8 text-slate-600">
-              SAT Math와 AP Calculus 등 미국 커리큘럼 수학을 David Cho가 직접 1:1로 지도합니다. 학생의 현재 수준과 목표 시험 일정에 맞춰 개념 정리, 문제 풀이 전략, 실전 연습을 함께 설계합니다.
+              미국 대학은 성적과 함께 학생이 어떤 과목을 선택했는지를 봅니다. 하지만 준비 없이 AP 과목을 늘리면 오히려 위험합니다. 많은 학생이 AP가 몰리는 11학년에 학습 습관과 기초가 부족한 과목부터 성적이 떨어집니다.
+            </p>
+            <p className="mt-4 text-lg leading-8 text-slate-600">
+              영어와 수학은 하루아침에 좋아지는 과목이 아닙니다. David Cho는 30년간 학생들을 직접 가르쳐 온 경험으로 영어·수학을 포함한 거의 전 과목의 학습 상태를 진단하고, 학생에게 맞는 과목 선택과 준비 순서를 설계합니다.
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {mathCourses.map((course) => (
-                <div key={course.en} className="border border-slate-200 bg-slate-50 p-5">
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">{course.en}</p>
-                  <h3 className="mt-2 font-semibold leading-snug">{course.ko}</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">{course.text}</p>
+              {diagnosisAreas.map((area) => (
+                <div key={area.en} className="border border-slate-200 bg-slate-50 p-5">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">{area.en}</p>
+                  <h3 className="mt-2 font-semibold leading-snug">{area.ko}</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{area.text}</p>
                 </div>
               ))}
             </div>
@@ -338,7 +341,7 @@ export default function BoutiqueAdmissionsLandingPage() {
               onClick={() => window.open("https://pf.kakao.com/_xdxnpxbX/chat", "_blank", "noopener,noreferrer")}
               className="mt-8 inline-flex items-center rounded-none border border-slate-950 bg-slate-950 px-8 py-5 text-base font-semibold text-white hover:bg-slate-800"
             >
-              수학 수업 문의하기 <Icon name="arrowRight" className="ml-2 h-5 w-5" />
+              학습 진단 상담 받기 <Icon name="arrowRight" className="ml-2 h-5 w-5" />
             </button>
           </div>
         </div>
