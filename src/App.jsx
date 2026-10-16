@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 const icons = {
@@ -87,6 +86,13 @@ const partnerships = [
   }
 ];
 
+const mathCourses = [
+  { en: "SAT Math", ko: "Digital SAT 수학 대비", text: "출제 유형 분석과 시간 관리 전략으로 목표 점수까지 준비합니다." },
+  { en: "AP Calculus AB / BC", ko: "AP 미적분", text: "개념 이해와 Free Response 서술 연습을 함께 진행합니다." },
+  { en: "Algebra · Geometry · Precalculus", ko: "학교 수학 내신", text: "미국 학교 커리큘럼에 맞춰 기초부터 탄탄하게 다집니다." },
+  { en: "1:1 Tutoring", ko: "1:1 맞춤 수업", text: "학생 수준과 일정에 맞춘 개별 수업으로 진행합니다." }
+];
+
 const contentTests = [
   {
     name: "서비스 섹션은 최소 여섯 가지 항목을 포함해야 합니다",
@@ -164,9 +170,9 @@ export default function BoutiqueAdmissionsLandingPage() {
               >
                 가족 상담 예약하기 <Icon name="arrowRight" className="ml-2 h-5 w-5" />
               </button>
-              <button className="rounded-none border border-slate-400 bg-transparent px-8 py-6 text-base font-semibold text-slate-900 hover:bg-black/5">
+              <a href="#programs" className="inline-flex items-center justify-center rounded-none border border-slate-400 bg-transparent px-8 py-6 text-base font-semibold text-slate-900 hover:bg-black/5">
                 프로그램 보기
-              </button>
+              </a>
             </div>
             <div className="mt-10 border-l-2 border-slate-400 pl-5 text-base italic leading-8 text-slate-600" style={{ fontFamily: "Cormorant Garamond, serif" }}>
               “No junior consultants. No hand-offs. Every family works directly with David Cho from strategy to submission.”
@@ -185,9 +191,9 @@ export default function BoutiqueAdmissionsLandingPage() {
             <div className="overflow-hidden border border-black/10 bg-[#faf7f2] shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
               <div className="aspect-[4/5] overflow-hidden bg-[#e9e2d6]">
                 <img
-                  src="/images/david-cho.jpg"
-                  alt="David Cho"
-                  className="h-full w-full object-cover object-center"
+                  src="/images/admissions-desk.jpg"
+                  alt="David Cho — 미국 대학 입시 컨설턴트"
+                  className="h-full w-full object-cover object-[50%_30%]"
                 />
               </div>
 
@@ -227,7 +233,7 @@ export default function BoutiqueAdmissionsLandingPage() {
       <section className="bg-[#f5f1e8] px-6 py-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-amber-300">Why Families Choose Us</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-amber-700">Why Families Choose Us</p>
             <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] sm:text-4xl">입시를 아는 컨설턴트이기 전에, 학생을 성장시켜 본 교육자입니다.</h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -266,19 +272,19 @@ export default function BoutiqueAdmissionsLandingPage() {
         </div>
       </section>
 
-      <section className="bg-[#f5f1e8] px-6 py-24 lg:px-8">
+      <section id="programs" className="scroll-mt-8 bg-[#f5f1e8] px-6 py-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-amber-300">Educational Partnerships</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-amber-700">Educational Partnerships</p>
             <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] sm:text-4xl">학생의 성장 단계에 맞춘 Educational Partnerships</h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {partnerships.map((pkg, index) => {
+            {partnerships.map((pkg) => {
               const isHighlighted = pkg.name === "Complete Admissions Partnership";
               return (
                 <div key={pkg.name} className={`border border-black/5 ${isHighlighted ? "bg-slate-950 text-white" : "bg-[#faf7f2] text-slate-950"} shadow-sm`}>
                   <div className="p-7">
-                    <p className={`text-sm font-semibold ${isHighlighted ? "text-blue-800" : "text-amber-300"}`}>{pkg.audience}</p>
+                    <p className={`text-sm font-semibold ${isHighlighted ? "text-amber-300" : "text-amber-700"}`}>{pkg.audience}</p>
                     <h3 className="mt-3 text-2xl font-semibold leading-tight tracking-[-0.02em]">{pkg.name}</h3>
                     
                     <div className="mt-6 space-y-4">
@@ -293,6 +299,47 @@ export default function BoutiqueAdmissionsLandingPage() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+
+      <section id="math" className="scroll-mt-8 bg-white px-6 py-24 text-slate-950 lg:px-8">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="col-span-2 overflow-hidden bg-slate-100 sm:col-span-1 sm:row-span-2">
+              <img src="/images/math-point.jpg" alt="수학 수업을 설명하는 David Cho" loading="lazy" className="h-full w-full object-cover object-top" />
+            </div>
+            <div className="hidden overflow-hidden bg-slate-100 sm:block">
+              <img src="/images/math-notes.jpg" alt="수업 자료를 든 David Cho" loading="lazy" className="aspect-[4/5] h-full w-full object-cover object-top" />
+            </div>
+            <div className="hidden flex-col justify-end bg-[#1f2d27] p-6 text-white sm:flex">
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-amber-300">1:1 Math</p>
+              <p className="mt-3 text-lg font-semibold leading-snug">개념 이해부터 실전 풀이까지, 직접 지도합니다.</p>
+            </div>
+          </div>
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-800">Math &amp; Test Prep</p>
+            <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] sm:text-4xl">수학은 미국 대학 입시의 기초 체력입니다</h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">
+              SAT Math와 AP Calculus 등 미국 커리큘럼 수학을 David Cho가 직접 1:1로 지도합니다. 학생의 현재 수준과 목표 시험 일정에 맞춰 개념 정리, 문제 풀이 전략, 실전 연습을 함께 설계합니다.
+            </p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              {mathCourses.map((course) => (
+                <div key={course.en} className="border border-slate-200 bg-slate-50 p-5">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">{course.en}</p>
+                  <h3 className="mt-2 font-semibold leading-snug">{course.ko}</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{course.text}</p>
+                </div>
+              ))}
+            </div>
+            <button
+              type="button"
+              onClick={() => window.open("https://pf.kakao.com/_xdxnpxbX/chat", "_blank", "noopener,noreferrer")}
+              className="mt-8 inline-flex items-center rounded-none border border-slate-950 bg-slate-950 px-8 py-5 text-base font-semibold text-white hover:bg-slate-800"
+            >
+              수학 수업 문의하기 <Icon name="arrowRight" className="ml-2 h-5 w-5" />
+            </button>
           </div>
         </div>
       </section>
@@ -332,6 +379,9 @@ export default function BoutiqueAdmissionsLandingPage() {
             <p className="mt-5 text-lg leading-8 text-slate-600">
               David Cho는 학원 설립자, 수학 강사, SAT/ACT 전문가, 공립·차터학교 교사, 대학 입시 컨설턴트로서 다양한 교육 현장을 경험했습니다. 학생의 가능성을 정확히 읽고, 학부모님이 신뢰할 수 있는 현실적인 입시 및 학비 전략을 제시합니다.
             </p>
+            <div className="mt-8 aspect-[4/3] overflow-hidden bg-slate-100">
+              <img src="/images/admissions-welcome.jpg" alt="학부모 상담을 진행하는 David Cho" loading="lazy" className="h-full w-full object-cover object-[50%_25%]" />
+            </div>
           </div>
           <div className="grid gap-5">
             <BioPoint icon="users" title="전 EduPro California 설립자 및 대표" text="캘리포니아에서 대학 준비 중심의 학원을 운영하며 다양한 학생과 학부모를 지도했습니다." />
