@@ -327,6 +327,12 @@ export default function BoutiqueAdmissionsLandingPage() {
             <p className="mt-4 text-lg leading-8 text-slate-600">
               영어와 수학은 하루아침에 좋아지는 과목이 아닙니다. David Cho는 30년간 학생들을 직접 가르쳐 온 경험으로 영어·수학을 포함한 거의 전 과목의 학습 상태를 진단하고, 학생에게 맞는 과목 선택과 준비 순서를 설계합니다.
             </p>
+            <div className="mt-6 flex gap-3 border-l-2 border-amber-600 bg-amber-50/60 px-5 py-4">
+              <Icon name="shield" className="mt-0.5 h-5 w-5 flex-none text-amber-700" />
+              <p className="text-sm leading-6 text-slate-700">
+                <span className="font-semibold text-slate-950">미국 공립학교 정교사 자격 보유</span> — Iowa Standard Teaching License · 영어학습자 지도(K–12 English Language Learner) · 수학(K–8, 5–12) 과목 인증
+              </p>
+            </div>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {diagnosisAreas.map((area) => (
                 <div key={area.en} className="border border-slate-200 bg-slate-50 p-5">
@@ -389,6 +395,7 @@ export default function BoutiqueAdmissionsLandingPage() {
           <div className="grid gap-5">
             <BioPoint icon="users" title="전 EduPro California 설립자 및 대표" text="캘리포니아에서 대학 준비 중심의 학원을 운영하며 다양한 학생과 학부모를 지도했습니다." />
             <BioPoint icon="graduation" title="USC Rossier School of Education 출신 교육자" text="University of Southern California에서 Master of Arts in Teaching을 취득했습니다." />
+            <BioPoint icon="shield" title="미국 공립학교 정교사 자격 (Iowa Standard Teaching License)" text="영어학습자 지도(K–12 English Language Learner)와 수학(K–8, 5–12) 과목 인증을 보유하고 있습니다." />
             <BioPoint icon="message" title="영어·한국어 이중 언어 커뮤니케이션" text="학생과 학부모가 미국 입시의 기준, 준비 과정, 학비 전략을 명확히 이해하도록 돕습니다." />
           </div>
         </div>
