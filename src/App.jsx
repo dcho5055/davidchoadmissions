@@ -285,7 +285,7 @@ export default function BoutiqueAdmissionsLandingPage() {
           <div className="grid gap-8 md:grid-cols-3">
             <Stat number="30년" label="미국 공립학교, 커뮤니티 칼리지 강의, 학원 운영, 1:1 지도까지 이어진 교육 경력" />
             <Stat number="정교사 자격" label="미국 공립학교 정교사 자격 보유 — 수학 및 영어학습자(ELL) 과목 인증" />
-            <Stat number="500+" label="12년간 매년 약 45명, Top 30 대학 진학 — 바로 합격하거나 Transfer를 통해 목표 대학까지" />
+            <Stat number="500+" label="운영한 학원에서 12년간 매년 약 45명 Top 30 대학 진학 — 바로 합격하거나 Transfer를 통해 목표 대학까지" />
           </div>
         </div>
       </section>
@@ -418,7 +418,7 @@ export default function BoutiqueAdmissionsLandingPage() {
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-amber-700">Student Stories</p>
             <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] sm:text-4xl">학생마다 다른 출발점, 학생마다 다른 경로</h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">12년간 매년 약 45명의 학생을 Top 30 대학으로 보냈습니다. GPA가 부족했거나 지금 성적보다 더 높은 대학을 원했던 학생들도 Transfer를 통해 결국 목표 대학에 진학했습니다. 그중 몇 가지 실제 사례입니다.</p>
+            <p className="mt-5 text-lg leading-8 text-slate-600">David Cho가 운영한 학원에서는 12년간 매년 약 45명의 학생이 Top 30 대학에 진학했습니다. GPA가 부족했거나 지금 성적보다 더 높은 대학을 원했던 학생들도 Transfer를 통해 결국 목표 대학에 진학했습니다. 그중 몇 가지 실제 사례입니다.</p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {successStories.map((item) => (
