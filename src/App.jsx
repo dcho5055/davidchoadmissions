@@ -149,7 +149,7 @@ const faqs = [
   { q: "몇 학년부터 시작하는 것이 좋을까요?", a: "과목 선택이 입시에 큰 영향을 주기 때문에 9–10학년에 시작하는 것을 권합니다. 특히 AP 과목이 몰리는 11학년 전에 기초와 학습 습관을 점검하는 것이 중요합니다. 11–12학년도 학생 상황에 맞춰 지원 전략을 설계합니다." },
   { q: "국제학교나 한국 일반고 학생도 상담할 수 있나요?", a: "네, 가능합니다. 미국 고등학교뿐 아니라 국제학교와 한국 고등학교 학생도 학교 환경과 커리큘럼에 맞춰 전략을 세웁니다. 한국 고교 출신 학생의 편입 성공 사례도 있습니다." },
   { q: "Transfer(편입) 상담도 받을 수 있나요?", a: "네. Santa Monica College와 Glendale College 강의 경험을 바탕으로 커뮤니티 칼리지 과목 관리부터 UC 및 사립대 편입 전략까지 안내합니다. GPA가 낮거나 현재 성적보다 더 높은 대학을 원하는 학생에게 Transfer는 목표 대학에 도달하는 현실적인 경로입니다." },
-  { q: "비용은 어떻게 되나요?", a: "학생의 학년과 필요한 서비스 범위에 따라 프로그램 단위로 구성됩니다. 첫 가족 상담 후 학생에게 맞는 프로그램과 비용을 안내해 드립니다." },
+  { q: "비용은 어떻게 되나요?", a: "학생의 학년과 필요한 서비스 범위에 따라 프로그램 단위로 구성됩니다. 첫 가족 상담 후 학생에게 맞춘 제안서와 함께 비용을 안내해 드립니다." },
   { q: "상담은 어떻게 진행되나요?", a: "카카오톡으로 신청해 주시면 일정을 조율해 연락드립니다. 학부모 상담은 한국어와 영어 모두 가능하며, 진행 방식은 가정 상황에 맞춰 안내해 드립니다." }
 ];
 
@@ -566,7 +566,7 @@ export default function BoutiqueAdmissionsLandingPage() {
             <a href="https://pf.kakao.com/_xdxnpxbX/chat" target="_blank" rel="noopener noreferrer" className="text-[#FEE500] hover:text-white">카카오톡 상담</a>
           </nav>
         </div>
-        <p className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-xs">© {new Date().getFullYear()} David Cho Admissions. All rights reserved.</p>
+        <p className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-xs">© {new Date().getFullYear()} David Cho Admissions. Operated by IMT Academy, Virginia, USA. All rights reserved.</p>
       </footer>
     </main>
   );
