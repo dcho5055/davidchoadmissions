@@ -33,7 +33,7 @@ function Icon({ name, className = "h-5 w-5" }) {
 const services = [
   "미국 및 글로벌 대학 지원을 위한 맞춤형 대학 리스트 전략",
   "Common App 에세이와 Supplemental Essay 코칭",
-  "활동 리스트, 수상 경력, 리더십 경험의 전략적 정리",
+  "전공 방향에 맞춘 과외 활동(Extracurricular) 기획부터 활동 리스트·수상·리더십 경험의 전략적 정리까지",
   "SAT/ACT 및 수학 학업 역량을 고려한 장기 로드맵",
   "미국 대학 학비·장학금·재정보조(FAFSA/CSS Profile) 전략 컨설팅",
   "학생과 학부모를 위한 영어·한국어 이중 언어 상담",
@@ -370,7 +370,7 @@ export default function BoutiqueAdmissionsLandingPage() {
             </div>
             <div>
               <p className="leading-8 text-slate-300">
-                또한 Santa Monica College 근무 경험을 통해 미국 대학 transfer system에 대한 실질적인 이해를 갖추게 되었으며, 학생 상황에 맞는 다양한 전략적 편입 경로까지 폭넓게 안내할 수 있습니다.
+                또한 Santa Monica College와 Glendale College에서 Adjunct Professor로 강의하며 커뮤니티 칼리지 현장에서 미국 대학 Transfer 시스템을 직접 경험했습니다. 이를 바탕으로 학생 상황에 맞는 다양한 전략적 편입 경로까지 폭넓게 안내할 수 있습니다.
               </p>
               <p className="mt-5 leading-8 text-slate-300">
                 David Cho의 컨설팅은 단순한 원서 제출이 아니라, 학생의 잠재력·가정의 현실·장기적인 교육 방향을 함께 설계하는 프리미엄 교육 파트너십입니다.
@@ -386,7 +386,7 @@ export default function BoutiqueAdmissionsLandingPage() {
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-800">Founder Philosophy</p>
             <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] sm:text-4xl">입시 컨설턴트가 아닌, 학생 성장을 설계해 온 교육자</h2>
             <p className="mt-5 text-lg leading-8 text-slate-600">
-              David Cho는 학원 설립자, 수학 강사, SAT/ACT 전문가, 공립·차터학교 교사, 대학 입시 컨설턴트로서 다양한 교육 현장을 경험했습니다. 학생의 가능성을 정확히 읽고, 학부모님이 신뢰할 수 있는 현실적인 입시 및 학비 전략을 제시합니다.
+              David Cho는 학원 설립자, 수학 강사, SAT/ACT 전문가, 공립·차터학교 교사, 커뮤니티 칼리지 Adjunct Professor, 대학 입시 컨설턴트로서 다양한 교육 현장을 경험했습니다. 학생의 가능성을 정확히 읽고, 학부모님이 신뢰할 수 있는 현실적인 입시 및 학비 전략을 제시합니다.
             </p>
             <div className="mt-8 aspect-[4/3] overflow-hidden bg-slate-100">
               <img src="/images/admissions-welcome.jpg" alt="학부모 상담을 진행하는 David Cho" loading="lazy" className="h-full w-full object-cover object-[50%_25%]" />
@@ -396,6 +396,7 @@ export default function BoutiqueAdmissionsLandingPage() {
             <BioPoint icon="users" title="전 EduPro California 설립자 및 대표" text="캘리포니아에서 대학 준비 중심의 학원을 운영하며 다양한 학생과 학부모를 지도했습니다." />
             <BioPoint icon="graduation" title="USC Rossier School of Education 출신 교육자" text="University of Southern California에서 Master of Arts in Teaching을 취득했습니다." />
             <BioPoint icon="shield" title="미국 공립학교 정교사 자격 (Iowa Standard Teaching License)" text="영어학습자 지도(K–12 English Language Learner)와 수학(K–8, 5–12) 과목 인증을 보유하고 있습니다." />
+            <BioPoint icon="book" title="Santa Monica College · Glendale College Adjunct Professor" text="커뮤니티 칼리지 강단에서 Transfer 시스템을 직접 경험하여, 학생 상황에 맞는 편입 경로를 현실적으로 안내합니다." />
             <BioPoint icon="message" title="영어·한국어 이중 언어 커뮤니케이션" text="학생과 학부모가 미국 입시의 기준, 준비 과정, 학비 전략을 명확히 이해하도록 돕습니다." />
           </div>
         </div>
