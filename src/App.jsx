@@ -566,7 +566,7 @@ export default function BoutiqueAdmissionsLandingPage() {
             <a href="https://pf.kakao.com/_xdxnpxbX/chat" target="_blank" rel="noopener noreferrer" className="text-[#FEE500] hover:text-white">카카오톡 상담</a>
           </nav>
         </div>
-        <p className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-xs">© {new Date().getFullYear()} David Cho Admissions. Operated by IMT Academy, Virginia, USA. All rights reserved.</p>
+        <p className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-xs">© {new Date().getFullYear()} David Cho Admissions. Operated by IMT Academy LLC, Virginia, USA. All rights reserved.</p>
       </footer>
     </main>
   );
