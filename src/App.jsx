@@ -118,8 +118,8 @@ const successStories = [
   {
     initial: "S",
     type: "Freshman · Graduate",
-    result: "UCLA → Stanford 교육대학원",
-    story: "원래 공부를 잘하던 학생이었지만 스트레스가 컸던 만큼, 꼭 필요한 부분에 집중해서 지원했습니다. UCLA에 진학한 뒤 대학원 입시도 함께 준비해 Stanford 교육대학원에 합격했습니다.",
+    result: "UCLA → Stanford 대학원",
+    story: "원래 공부를 잘하던 학생이었지만 스트레스가 컸던 만큼, 꼭 필요한 부분에 집중해서 지원했습니다. UCLA에 진학한 뒤 대학원 입시도 함께 준비해 Stanford 대학원에 합격했습니다.",
     note: "학부 입시 이후의 진로까지 이어서 함께합니다."
   },
   {
