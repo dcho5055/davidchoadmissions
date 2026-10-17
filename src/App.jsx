@@ -93,6 +93,66 @@ const diagnosisAreas = [
   { en: "English & Math Roadmap", ko: "영어·수학 장기 로드맵", text: "단기간에 오르지 않는 두 과목을 학년별 로드맵으로 꾸준히 관리합니다." }
 ];
 
+const successStories = [
+  {
+    initial: "J",
+    type: "Freshman",
+    result: "UC Berkeley · Computer Science",
+    story: "넉넉하지 않은 가정 형편에 대학 준비 환경도 부족한 지역이었지만, 누구보다 성실한 학생이었습니다. 12학년에 시작해 시간이 많지 않았지만 QuestBridge 지원까지 함께 준비했고, UC Berkeley 컴퓨터공학과에 합격했습니다.",
+    note: "현재 실리콘밸리에서 엔지니어로 일하고 있습니다."
+  },
+  {
+    initial: "Y",
+    type: "Freshman",
+    result: "Yale University",
+    story: "11학년에 시작한 학생으로, AP 16과목을 이수하고 11개 클럽 중 9곳에서 회장·부회장을 맡을 만큼 리더십이 뛰어났습니다. 쌓아 온 활동과 노력을 하나의 스토리로 정리해 에세이와 원서를 완성했습니다.",
+    note: "최상위권 입시는 학생의 의지와 가정의 지원이 함께할 때 가능합니다."
+  },
+  {
+    initial: "S",
+    type: "Freshman · Graduate",
+    result: "UCLA → Stanford 교육대학원",
+    story: "원래 공부를 잘하던 학생이었지만 스트레스가 컸던 만큼, 꼭 필요한 부분에 집중해서 지원했습니다. UCLA에 진학한 뒤 대학원 입시도 함께 준비해 Stanford 교육대학원에 합격했습니다.",
+    note: "학부 입시 이후의 진로까지 이어서 함께합니다."
+  },
+  {
+    initial: "K",
+    type: "Freshman",
+    result: "USC",
+    story: "학업과 리더십 모두 뛰어나 고등학교와 USC에서 학생회장을 지낸 학생입니다. 다만 사춘기를 겪던 9학년에 받은 C 하나가 아쉽게 UPenn 불합격으로 이어졌습니다.",
+    note: "9–11학년 성적이 입시를 좌우합니다. 흔들리는 시기를 잡아 줄 어른이 필요한 이유입니다."
+  },
+  {
+    initial: "H",
+    type: "Transfer",
+    result: "한국 고교 → 커뮤니티 칼리지 → UC Berkeley",
+    story: "한국에서 고등학교를 다닌 학생으로, 기초 학습이 부족해 바로 4년제 진학은 어려웠습니다. 부모님을 설득해 편입 경로를 선택했고, 커뮤니티 칼리지 전 과목을 관리하며 좋은 성적을 만들어 UC Berkeley 편입에 성공했습니다.",
+    note: "편입은 차선책이 아니라 전략적인 선택이 될 수 있습니다."
+  },
+  {
+    initial: "M",
+    type: "Transfer",
+    result: "UC Santa Barbara → 미 해군 장교",
+    story: "한국에서 온 지 얼마 되지 않아 영어가 많이 부족한 상태에서 수학 수업으로 시작했습니다. 학생 상황에 맞춰 편입 경로를 함께 준비해 UC Santa Barbara에 진학했고, 이후 ROTC를 거쳐 미 해군 장교가 되었습니다.",
+    note: "학생에게 맞는 길은 성적표만으로는 보이지 않습니다."
+  }
+];
+
+const processSteps = [
+  { step: "01", title: "가족 상담", text: "카카오톡으로 상담을 신청하시면 학생의 현재 상황과 가정의 목표를 먼저 듣습니다." },
+  { step: "02", title: "학업 진단", text: "성적표, 수강 과목, 활동 이력을 검토하고 과목별 학습 상태와 강점·약점을 진단합니다." },
+  { step: "03", title: "맞춤 로드맵", text: "과목 선택, 과외 활동, 시험 일정, 대학 리스트까지 학년별 로드맵을 설계합니다." },
+  { step: "04", title: "실행과 관리", text: "에세이와 원서, 지원 일정까지 David Cho가 직접 관리하며 정기적으로 점검합니다." }
+];
+
+const faqs = [
+  { q: "몇 학년부터 시작하는 것이 좋을까요?", a: "과목 선택이 입시에 큰 영향을 주기 때문에 9–10학년에 시작하는 것을 권합니다. 특히 AP 과목이 몰리는 11학년 전에 기초와 학습 습관을 점검하는 것이 중요합니다. 11–12학년도 학생 상황에 맞춰 지원 전략을 설계합니다." },
+  { q: "국제학교나 한국 일반고 학생도 상담할 수 있나요?", a: "네, 가능합니다. 미국 고등학교뿐 아니라 국제학교와 한국 고등학교 학생도 학교 환경과 커리큘럼에 맞춰 전략을 세웁니다. 한국 고교 출신 학생의 편입 성공 사례도 있습니다." },
+  { q: "Transfer(편입) 상담도 받을 수 있나요?", a: "네. Santa Monica College와 Glendale College 강의 경험을 바탕으로 커뮤니티 칼리지 과목 관리부터 UC 및 사립대 편입 전략까지 안내합니다." },
+  { q: "비용은 어떻게 되나요?", a: "학생의 학년과 필요한 서비스 범위에 따라 프로그램 단위로 구성됩니다. 첫 가족 상담 후 학생에게 맞는 프로그램과 비용을 안내해 드립니다." },
+  { q: "상담은 어떻게 진행되나요?", a: "카카오톡으로 신청해 주시면 일정을 조율해 연락드립니다. 학부모 상담은 한국어와 영어 모두 가능하며, 진행 방식은 가정 상황에 맞춰 안내해 드립니다." }
+];
+
 const contentTests = [
   {
     name: "서비스 섹션은 최소 여섯 가지 항목을 포함해야 합니다",
@@ -223,9 +283,9 @@ export default function BoutiqueAdmissionsLandingPage() {
       <section className="bg-white px-6 py-16 text-slate-950 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-3">
-            <Stat number="15+" label="K–12, 대학 강의, 학원 운영, 개인 지도까지 아우르는 교육 경력" />
-            <Stat number="$1M+" label="미국 캘리포니아 학원 운영 당시 연간 예산 관리 경험" />
-            <Stat number="25+" label="대학원 학위 보유 강사를 포함한 파트타임 강사진 관리 경험" />
+            <Stat number="30년" label="미국 공립학교, 커뮤니티 칼리지 강의, 학원 운영, 1:1 지도까지 이어진 교육 경력" />
+            <Stat number="정교사 자격" label="미국 공립학교 정교사 자격 보유 — 수학 및 영어학습자(ELL) 과목 인증" />
+            <Stat number="Yale · Berkeley" label="Freshman 합격부터 Transfer, Stanford 대학원 진학까지 직접 지도한 사례" />
           </div>
         </div>
       </section>
@@ -353,6 +413,30 @@ export default function BoutiqueAdmissionsLandingPage() {
         </div>
       </section>
 
+      <section id="stories" className="scroll-mt-8 bg-[#f5f1e8] px-6 py-24 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-amber-700">Student Stories</p>
+            <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] sm:text-4xl">학생마다 다른 출발점, 학생마다 다른 경로</h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">같은 대학을 목표로 해도 학생의 상황은 모두 다릅니다. David Cho가 직접 지도한 학생들의 실제 사례입니다.</p>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {successStories.map((item) => (
+              <article key={item.initial + item.result} className="flex flex-col border border-black/5 bg-[#faf7f2] p-7 shadow-sm">
+                <div className="flex items-center justify-between gap-3">
+                  <span className="flex h-11 w-11 items-center justify-center bg-slate-950 text-lg font-semibold text-white">{item.initial}</span>
+                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">{item.type}</span>
+                </div>
+                <h3 className="mt-5 text-xl font-semibold leading-snug tracking-[-0.02em]">{item.result}</h3>
+                <p className="mt-3 flex-1 text-sm leading-7 text-slate-600">{item.story}</p>
+                <p className="mt-5 border-t border-slate-300 pt-4 text-sm font-medium leading-6 text-slate-800">{item.note}</p>
+              </article>
+            ))}
+          </div>
+          <p className="mt-8 text-sm text-slate-500">학생 개인정보 보호를 위해 이니셜로 표기하고, 일부 세부 사항은 생략했습니다.</p>
+        </div>
+      </section>
+
       <section className="border-y border-black/5 bg-[#1f2d27] px-6 py-24 text-white lg:px-8">
         <div className="mx-auto max-w-5xl border border-white/10 bg-white/5 p-10 sm:p-14">
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-amber-300">Founder Story</p>
@@ -402,6 +486,44 @@ export default function BoutiqueAdmissionsLandingPage() {
         </div>
       </section>
 
+      <section id="process" className="scroll-mt-8 bg-white px-6 py-24 text-slate-950 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-800">How It Works</p>
+            <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] sm:text-4xl">상담부터 제출까지, 이렇게 진행됩니다</h2>
+          </div>
+          <ol className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {processSteps.map((item) => (
+              <li key={item.step} className="border-t-2 border-slate-950 pt-6">
+                <p className="text-sm font-semibold tracking-[0.18em] text-amber-700">STEP {item.step}</p>
+                <h3 className="mt-3 text-xl font-semibold tracking-[-0.02em]">{item.title}</h3>
+                <p className="mt-3 leading-7 text-slate-600">{item.text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section id="faq" className="scroll-mt-8 border-t border-black/5 bg-[#f5f1e8] px-6 py-24 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-amber-700">FAQ</p>
+            <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] sm:text-4xl">자주 묻는 질문</h2>
+          </div>
+          <div className="divide-y divide-slate-300 border-y border-slate-300">
+            {faqs.map((item) => (
+              <details key={item.q} className="group py-5">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold leading-snug">
+                  {item.q}
+                  <span className="flex-none text-2xl font-light text-slate-500 transition group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-3 leading-8 text-slate-600">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#f5f1e8] px-6 py-24 lg:px-8">
         <div className="mx-auto max-w-5xl border border-black/10 bg-[#ede7dc] p-10 text-center shadow-sm sm:p-14">
           <div className="mx-auto flex h-16 w-16 items-center justify-center border border-slate-300 bg-white text-slate-950">
@@ -429,6 +551,23 @@ export default function BoutiqueAdmissionsLandingPage() {
           </div>
         </div>
       </section>
+      <footer className="bg-slate-950 px-6 py-12 text-slate-400 lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-xl font-semibold tracking-[-0.02em] text-white">David Cho Admissions</p>
+            <p className="mt-2 text-sm">미국 대학 입시 컨설팅 · 학업 진단 · Transfer 전략</p>
+            <p className="mt-1 text-sm">Korean-English Consultation</p>
+          </div>
+          <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            <a href="#programs" className="hover:text-white">프로그램</a>
+            <a href="#diagnosis" className="hover:text-white">학업 진단</a>
+            <a href="#stories" className="hover:text-white">합격 사례</a>
+            <a href="#faq" className="hover:text-white">FAQ</a>
+            <a href="https://pf.kakao.com/_xdxnpxbX/chat" target="_blank" rel="noopener noreferrer" className="text-[#FEE500] hover:text-white">카카오톡 상담</a>
+          </nav>
+        </div>
+        <p className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-xs">© {new Date().getFullYear()} David Cho Admissions. All rights reserved.</p>
+      </footer>
     </main>
   );
 }
