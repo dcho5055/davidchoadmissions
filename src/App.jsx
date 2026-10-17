@@ -102,6 +102,13 @@ const successStories = [
     note: "현재 실리콘밸리에서 엔지니어로 일하고 있습니다."
   },
   {
+    initial: "E",
+    type: "Freshman · Pre-Med",
+    result: "Northeastern University",
+    story: "수학이 부족해서 찾아온 학생으로, 2년간 학습 관리를 받으며 고등학교 전 과목 A를 만들었습니다. 의대 진학을 목표로 수학·과학 과목에 집중했고, 여름방학 활동까지 의료 분야 중심으로 정리해 합격했습니다.",
+    note: "의료 관련 활동을 하되, 평범한 스펙으로 보이지 않도록 설계했습니다."
+  },
+  {
     initial: "Y",
     type: "Freshman",
     result: "Yale University",
@@ -128,13 +135,6 @@ const successStories = [
     result: "한국 고교 → 커뮤니티 칼리지 → UC Berkeley",
     story: "한국에서 고등학교를 다닌 학생으로, 기초 학습이 부족해 바로 4년제 진학은 어려웠습니다. 부모님을 설득해 편입 경로를 선택했고, 커뮤니티 칼리지 전 과목을 관리하며 좋은 성적을 만들어 UC Berkeley 편입에 성공했습니다.",
     note: "편입은 차선책이 아니라 전략적인 선택이 될 수 있습니다."
-  },
-  {
-    initial: "M",
-    type: "Transfer",
-    result: "UC Santa Barbara → 미 해군 장교",
-    story: "한국에서 온 지 얼마 되지 않아 영어가 많이 부족한 상태에서 수학 수업으로 시작했습니다. 학생 상황에 맞춰 편입 경로를 함께 준비해 UC Santa Barbara에 진학했고, 이후 ROTC를 거쳐 미 해군 장교가 되었습니다.",
-    note: "학생에게 맞는 길은 성적표만으로는 보이지 않습니다."
   }
 ];
 
