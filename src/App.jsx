@@ -123,11 +123,11 @@ const successStories = [
     note: "학부 입시 이후의 진로까지 이어서 함께합니다."
   },
   {
-    initial: "K",
+    initial: "P",
     type: "Freshman",
-    result: "USC",
-    story: "학업과 리더십 모두 뛰어나 고등학교와 USC에서 학생회장을 지낸 학생입니다. 다만 사춘기를 겪던 9학년에 받은 C 하나가 아쉽게 UPenn 불합격으로 이어졌습니다.",
-    note: "9–11학년 성적이 입시를 좌우합니다. 흔들리는 시기를 잡아 줄 어른이 필요한 이유입니다."
+    result: "Princeton University",
+    story: "축구팀 주장을 맡으면서 전 과목 A를 지켰고, 음악에서도 뛰어난 실력을 보인 아주 성실한 학생입니다. 운동·학업·예술에서 쌓은 강점을 하나의 일관된 이야기로 엮어 Princeton에 합격했습니다.",
+    note: "여러 분야의 강점은 하나의 이야기로 연결될 때 힘을 가집니다."
   },
   {
     initial: "H",
