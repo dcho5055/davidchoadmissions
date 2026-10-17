@@ -148,7 +148,7 @@ const processSteps = [
 const faqs = [
   { q: "몇 학년부터 시작하는 것이 좋을까요?", a: "과목 선택이 입시에 큰 영향을 주기 때문에 9–10학년에 시작하는 것을 권합니다. 특히 AP 과목이 몰리는 11학년 전에 기초와 학습 습관을 점검하는 것이 중요합니다. 11–12학년도 학생 상황에 맞춰 지원 전략을 설계합니다." },
   { q: "국제학교나 한국 일반고 학생도 상담할 수 있나요?", a: "네, 가능합니다. 미국 고등학교뿐 아니라 국제학교와 한국 고등학교 학생도 학교 환경과 커리큘럼에 맞춰 전략을 세웁니다. 한국 고교 출신 학생의 편입 성공 사례도 있습니다." },
-  { q: "Transfer(편입) 상담도 받을 수 있나요?", a: "네. Santa Monica College와 Glendale College 강의 경험을 바탕으로 커뮤니티 칼리지 과목 관리부터 UC 및 사립대 편입 전략까지 안내합니다." },
+  { q: "Transfer(편입) 상담도 받을 수 있나요?", a: "네. Santa Monica College와 Glendale College 강의 경험을 바탕으로 커뮤니티 칼리지 과목 관리부터 UC 및 사립대 편입 전략까지 안내합니다. GPA가 낮거나 현재 성적보다 더 높은 대학을 원하는 학생에게 Transfer는 목표 대학에 도달하는 현실적인 경로입니다." },
   { q: "비용은 어떻게 되나요?", a: "학생의 학년과 필요한 서비스 범위에 따라 프로그램 단위로 구성됩니다. 첫 가족 상담 후 학생에게 맞는 프로그램과 비용을 안내해 드립니다." },
   { q: "상담은 어떻게 진행되나요?", a: "카카오톡으로 신청해 주시면 일정을 조율해 연락드립니다. 학부모 상담은 한국어와 영어 모두 가능하며, 진행 방식은 가정 상황에 맞춰 안내해 드립니다." }
 ];
@@ -285,7 +285,7 @@ export default function BoutiqueAdmissionsLandingPage() {
           <div className="grid gap-8 md:grid-cols-3">
             <Stat number="30년" label="미국 공립학교, 커뮤니티 칼리지 강의, 학원 운영, 1:1 지도까지 이어진 교육 경력" />
             <Stat number="정교사 자격" label="미국 공립학교 정교사 자격 보유 — 수학 및 영어학습자(ELL) 과목 인증" />
-            <Stat number="Yale · Berkeley" label="Freshman 합격부터 Transfer, Stanford 대학원 진학까지 직접 지도한 사례" />
+            <Stat number="500+" label="12년간 매년 약 45명, Top 30 대학 진학 — 바로 합격하거나 Transfer를 통해 목표 대학까지" />
           </div>
         </div>
       </section>
@@ -418,7 +418,7 @@ export default function BoutiqueAdmissionsLandingPage() {
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-amber-700">Student Stories</p>
             <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] sm:text-4xl">학생마다 다른 출발점, 학생마다 다른 경로</h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">같은 대학을 목표로 해도 학생의 상황은 모두 다릅니다. David Cho가 직접 지도한 학생들의 실제 사례입니다.</p>
+            <p className="mt-5 text-lg leading-8 text-slate-600">12년간 매년 약 45명의 학생을 Top 30 대학으로 보냈습니다. GPA가 부족했거나 지금 성적보다 더 높은 대학을 원했던 학생들도 Transfer를 통해 결국 목표 대학에 진학했습니다. 그중 몇 가지 실제 사례입니다.</p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {successStories.map((item) => (
