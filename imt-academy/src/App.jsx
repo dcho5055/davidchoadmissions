@@ -108,7 +108,7 @@ const faqs = [
   { q: "Are lessons online?", a: "Yes. All lessons are live 1:1 sessions on Zoom with screen sharing, so students anywhere in the U.S. can join from home." },
   { q: "When are lessons available?", a: "Weekday evenings 6–10 PM Eastern Time, plus weekend mornings and afternoons. We set a regular weekly time after the consultation." },
   { q: "How long is each lesson?", a: "Most lessons are 60 or 90 minutes. For AP and SAT students, 90 minutes usually works best." },
-  { q: "How much does tutoring cost?", a: "It depends on the course and how often your student meets. After the free consultation, I'll send a plan with the schedule and pricing." },
+  { q: "How much does tutoring cost?", a: "Lessons start at $150/hour, and SAT Math and AP courses are $180/hour. After the free consultation, I'll send a plan with the exact schedule and pricing." },
   { q: "How often should my student meet?", a: "Most students meet once or twice a week. Before an SAT or AP exam, we may meet more often for a short period." },
   { q: "Who teaches the lessons?", a: "I do. Every lesson is taught by David Cho personally — a licensed math teacher (Iowa Standard License, Mathematics K–8 and 5–12) and former California public middle and high school math teacher." },
   { q: "Can I talk with you in Korean?", a: "Yes. Lessons are in English, and parent consultations and updates can be in English or Korean. 학부모 상담은 한국어로 가능합니다." },
