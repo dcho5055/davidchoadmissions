@@ -56,6 +56,15 @@ const signs = [
   "Keeps making the same mistakes, and nobody has found out why",
 ];
 
+const career = [
+  { k: "USC", v: "Master of Arts in Teaching" },
+  { k: "California public schools", v: "Math teacher at Madrona Middle School (Torrance) and Ánimo Venice Charter High School (Los Angeles)" },
+  { k: "Santa Monica College · Glendale College", v: "Adjunct Professor" },
+  { k: "12 years", v: "Ran a learning center with Top 30 college admits every year" },
+  { k: "Iowa Standard Teaching License", v: "Mathematics K–12 · English Language Learner K–12" },
+  { k: "Today", v: "1:1 online math tutoring and college admissions advising" },
+];
+
 const reviews = [
   {
     who: "Jihyun K.",
@@ -138,6 +147,7 @@ export default function App() {
           </a>
           <nav className="flex items-center gap-6 text-sm font-medium text-slate-600">
             <a href="#courses" className="hidden hover:text-[#14284b] md:inline">Courses</a>
+            <a href="#about" className="hidden hover:text-[#14284b] md:inline">About</a>
             <a href="#how" className="hidden hover:text-[#14284b] md:inline">How it works</a>
             <a href="#faq" className="hidden hover:text-[#14284b] md:inline">FAQ</a>
             <a href={CONTACT_URL} className="rounded-full bg-[#14284b] px-4 py-2 text-white hover:bg-[#0e1d38]">Contact</a>
@@ -262,6 +272,26 @@ export default function App() {
               “This student first came to me because math was the weak spot. After two years of steady work: straight A's in high school, and admission to Northeastern University — with a plan for medical school.”
             </blockquote>
             <p className="mt-6 text-white/70">We focused on math and science, built steady study habits, and planned ahead instead of cramming.</p>
+          </div>
+        </section>
+
+        <section id="about" className="scroll-mt-20 mx-auto max-w-6xl px-4 pt-24 sm:px-6">
+          <div className="grid gap-12 rounded-[2rem] bg-white p-8 shadow-sm sm:p-12 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <img src="/images/portrait.jpg" alt="David Cho" loading="lazy" className="h-32 w-32 rounded-full object-cover object-top" />
+              <p className="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">About David Cho</p>
+              <h2 className="mt-4 text-3xl leading-snug tracking-tight text-[#14284b] sm:text-4xl" style={serif}>30 years of helping students get better at math.</h2>
+              <p className="mt-4 leading-8 text-slate-600">In public school classrooms, on college campuses, and one-on-one.</p>
+            </div>
+            <ol className="relative border-l-2 border-[#b5651d]/20 pl-8">
+              {career.map((c) => (
+                <li key={c.k} className="relative pb-7 last:pb-0">
+                  <span className="absolute -left-[2.45rem] top-1.5 h-3 w-3 rounded-full bg-[#b5651d]" />
+                  <p className="text-lg font-semibold text-[#14284b]">{c.k}</p>
+                  <p className="mt-1 leading-7 text-slate-600">{c.v}</p>
+                </li>
+              ))}
+            </ol>
           </div>
         </section>
 
