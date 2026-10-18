@@ -1,6 +1,17 @@
 // Single place to change how families reach IMT Academy.
 const CONTACT_EMAIL = "dcho5055@gmail.com";
 const CONTACT_URL = `mailto:${CONTACT_EMAIL}?subject=IMT%20Academy%20%E2%80%94%20Free%20Math%20Gap%20Diagnosis&body=Student%20grade%3A%0ACourse%2Fsubject%3A%0AYour%20time%20zone%3A%0A`;
+const KAKAO_URL = "https://pf.kakao.com/_xkcnmX/chat";
+
+function KakaoButton({ className = "", children = "카카오톡 상담" }) {
+  return (
+    <a href={KAKAO_URL} target="_blank" rel="noopener noreferrer" lang="ko" className={`inline-flex items-center justify-center gap-2 rounded-full bg-[#FEE500] px-7 py-4 text-base font-semibold text-[#191919] transition hover:bg-[#f5dc00] ${className}`}>
+      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor"><path d="M12 3C6.48 3 2 6.58 2 11c0 2.85 1.86 5.35 4.66 6.77-.2.74-.74 2.69-.85 3.11-.13.52.19.51.4.37.17-.11 2.66-1.81 3.73-2.54.67.1 1.36.15 2.06.15 5.52 0 10-3.58 10-8S17.52 3 12 3z"/></svg>
+      {children}
+    </a>
+  );
+}
+
 const HOURS = "Weekday evenings 6–10 PM ET · Weekends";
 
 const paths = {
@@ -150,7 +161,8 @@ export default function App() {
             <a href="#about" className="hidden hover:text-[#14284b] md:inline">About</a>
             <a href="#how" className="hidden hover:text-[#14284b] md:inline">How it works</a>
             <a href="#faq" className="hidden hover:text-[#14284b] md:inline">FAQ</a>
-            <a href={CONTACT_URL} className="rounded-full bg-[#14284b] px-4 py-2 text-white hover:bg-[#0e1d38]">Contact</a>
+            <a href={KAKAO_URL} target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#FEE500] px-4 py-2 text-[#191919] hover:bg-[#f5dc00]" lang="ko">카톡 상담</a>
+            <a href={CONTACT_URL} className="hidden rounded-full bg-[#14284b] px-4 py-2 text-white hover:bg-[#0e1d38] sm:inline">Contact</a>
           </nav>
         </div>
       </header>
@@ -170,7 +182,7 @@ export default function App() {
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Cta />
-              <a href="#courses" className="inline-flex items-center justify-center px-2 py-3 text-base font-semibold text-[#14284b] underline-offset-4 hover:underline">See courses</a>
+              <KakaoButton />
             </div>
             <p className="mt-5 text-sm font-medium text-slate-500">Lessons: {HOURS}</p>
           </div>
@@ -322,6 +334,7 @@ export default function App() {
               <p><span className="font-semibold text-[#14284b]">수학이 아니라 영어에서 막힐 때</span><br />문장제, SAT, AP 서술형에서 점수가 깎이는 이유가 영어 표현인 경우가 많습니다. 수학과 ELL 자격으로 둘 다 잡습니다.</p>
               <p><span className="font-semibold text-[#14284b]">수업은 영어, 상담은 한국어</span><br />수업은 학교와 같은 영어로, 학부모님 상담과 진행 보고는 한국어로 드립니다.</p>
             </div>
+            <KakaoButton className="mt-8">카카오톡으로 한국어 상담하기</KakaoButton>
           </div>
         </section>
 
@@ -351,7 +364,10 @@ export default function App() {
               <p className="mt-3 text-lg leading-8 text-slate-600">The Math Gap Diagnosis is free: 30 minutes with your student, then a short written report. I teach a limited number of students each semester.</p>
               <p className="mt-3 text-sm text-slate-500">Email <a href={CONTACT_URL} className="font-semibold text-[#14284b] underline underline-offset-4">{CONTACT_EMAIL}</a> · {HOURS}</p>
             </div>
-            <Cta className="flex-none" />
+            <div className="flex flex-none flex-col gap-3">
+              <Cta />
+              <KakaoButton />
+            </div>
           </div>
         </section>
       </main>
