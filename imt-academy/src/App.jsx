@@ -1,5 +1,7 @@
 // Single place to change how families reach IMT Academy.
-const CONTACT_URL = "mailto:dcho5055@gmail.com?subject=IMT%20Academy%20%E2%80%94%20Free%20Consultation";
+const CONTACT_EMAIL = "dcho5055@gmail.com";
+const CONTACT_URL = `mailto:${CONTACT_EMAIL}?subject=IMT%20Academy%20%E2%80%94%20Free%20Consultation&body=Student%20grade%3A%0ACourse%2Fsubject%3A%0AYour%20time%20zone%3A%0A`;
+const HOURS = "Weekday evenings 6–10 PM ET · Weekends";
 
 const paths = {
   arrow: "M5 12h14M13 5l7 7-7 7",
@@ -16,8 +18,8 @@ function Icon({ name, className = "h-5 w-5" }) {
 }
 
 const credentials = [
-  { k: "30 years", v: "teaching math in the U.S." },
-  { k: "Licensed", v: "U.S. state teaching license — Mathematics" },
+  { k: "30 years", v: "in education — classroom, college, and 1:1 tutoring" },
+  { k: "Licensed", v: "Iowa Standard Teaching License — Mathematics K–12 & English Language Learner" },
   { k: "USC", v: "Master of Arts in Teaching" },
   { k: "Former", v: "California public middle & high school math teacher" },
 ];
@@ -25,7 +27,8 @@ const credentials = [
 const courses = [
   { name: "SAT Math", level: "Grades 9–12", text: "Question-type strategy, timing, and targeted practice for the Digital SAT." },
   { name: "AP Calculus AB / BC", level: "Grades 11–12", text: "Concepts first, then exam-style multiple choice and free-response writing." },
-  { name: "Precalculus", level: "Grades 10–12", text: "Functions, trigonometry, and the habits students need before calculus." },
+  { name: "AP Precalculus · Precalculus", level: "Grades 10–12", text: "Functions, trigonometry, and the habits students need before calculus — including AP Precalculus exam prep." },
+  { name: "AP Statistics", level: "Grades 10–12", text: "Data, probability, and inference explained clearly, with practice on AP-style free-response questions." },
   { name: "Algebra I · Geometry · Algebra II", level: "Grades 8–11", text: "Keep up with class, raise grades, and close the gaps that slow students down later." },
   { name: "Middle School Math", level: "Grades 6–8", text: "Build a solid foundation early, before math gets harder and grades start to count." },
 ];
@@ -45,10 +48,12 @@ const reasons = [
 ];
 
 const faqs = [
-  { q: "Are lessons online?", a: "Yes. All lessons are live 1:1 sessions online, so students anywhere in the U.S. can join from home." },
+  { q: "Are lessons online?", a: "Yes. All lessons are live 1:1 sessions on Zoom with screen sharing, so students anywhere in the U.S. can join from home." },
+  { q: "When are lessons available?", a: "Weekday evenings 6–10 PM Eastern Time, plus weekend mornings and afternoons. We set a regular weekly time after the consultation." },
+  { q: "How long is each lesson?", a: "Most lessons are 60 or 90 minutes. For AP and SAT students, 90 minutes usually works best." },
   { q: "How much does tutoring cost?", a: "It depends on the course and how often your student meets. After the free consultation, I'll send a plan with the schedule and pricing." },
   { q: "How often should my student meet?", a: "Most students meet once or twice a week. Before an SAT or AP exam, we may meet more often for a short period." },
-  { q: "Who teaches the lessons?", a: "I do. Every lesson is taught by David Cho personally." },
+  { q: "Who teaches the lessons?", a: "I do. Every lesson is taught by David Cho personally — a licensed math teacher (Iowa Standard License, Mathematics K–8 and 5–12) and former California public middle and high school math teacher." },
   { q: "Can I talk with you in Korean?", a: "Yes. Lessons are in English, and parent consultations and updates can be in English or Korean. 학부모 상담은 한국어로 가능합니다." },
 ];
 
@@ -91,7 +96,7 @@ export default function App() {
               Math that finally makes sense.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-              SAT Math, AP Calculus, and school math, taught one-on-one by David Cho — a U.S. state-licensed math teacher with 30 years of classroom and tutoring experience.
+              SAT Math, AP Calculus, and school math, taught one-on-one by David Cho — a U.S. state-licensed math teacher (Mathematics K–12) with 30 years in education.
             </p>
             <p className="mt-3 max-w-xl text-base leading-7 text-slate-500">
               미국 정교사 자격을 가진 30년 경력 선생님의 1:1 온라인 수학 수업. 학부모 상담은 한국어로 가능합니다.
@@ -100,6 +105,7 @@ export default function App() {
               <Cta />
               <a href="#courses" className="inline-flex items-center justify-center px-2 py-3 text-base font-semibold text-[#14284b] underline-offset-4 hover:underline">See courses</a>
             </div>
+            <p className="mt-5 text-sm font-medium text-slate-500">Lessons: {HOURS}</p>
           </div>
           <div className="relative mx-auto w-full max-w-md lg:max-w-none">
             <div className="absolute -left-4 -top-4 hidden h-full w-full rounded-[2rem] border-2 border-[#b5651d]/30 lg:block" />
@@ -131,9 +137,9 @@ export default function App() {
                 <p className="mt-3 leading-7 text-slate-600">{c.text}</p>
               </article>
             ))}
-            <article className="flex flex-col justify-between rounded-3xl bg-[#14284b] p-7 text-white">
+            <article className="flex flex-col justify-between rounded-3xl bg-[#14284b] p-7 text-white lg:col-span-3 lg:flex-row lg:items-center">
               <p className="text-lg leading-8 text-white/85">Not sure where your student should start?</p>
-              <Cta variant="light" className="mt-6 self-start">Ask for a diagnosis</Cta>
+              <Cta variant="light" className="mt-6 self-start lg:mt-0 lg:self-center">Ask for a diagnosis</Cta>
             </article>
           </div>
         </section>
@@ -183,6 +189,18 @@ export default function App() {
           </div>
         </section>
 
+        <section className="mx-auto max-w-6xl px-4 pt-24 sm:px-6" lang="ko">
+          <div className="rounded-[2rem] border border-[#b5651d]/20 bg-white p-8 sm:p-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">학부모님께</p>
+            <h2 className="mt-4 text-3xl leading-snug tracking-tight text-[#14284b] sm:text-4xl">상담과 진행 보고는 한국어로 편하게 하실 수 있습니다.</h2>
+            <div className="mt-6 grid gap-6 text-base leading-8 text-slate-600 md:grid-cols-3">
+              <p><span className="font-semibold text-[#14284b]">미국 정교사 자격</span><br />Iowa Standard Teaching License — 수학(K–8, 5–12) 및 영어학습자(K–12) 과목 인증.</p>
+              <p><span className="font-semibold text-[#14284b]">진단부터 시작합니다</span><br />문제를 더 풀리기 전에, 아이가 어디서 왜 막히는지부터 정확히 찾아냅니다.</p>
+              <p><span className="font-semibold text-[#14284b]">수업은 영어, 상담은 한국어</span><br />수업은 학교와 같은 영어로, 학부모님 상담과 진행 보고는 한국어로 드립니다.</p>
+            </div>
+          </div>
+        </section>
+
         <section id="faq" className="scroll-mt-20 mx-auto grid max-w-6xl gap-12 px-4 py-24 sm:px-6 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">FAQ</p>
@@ -207,6 +225,7 @@ export default function App() {
             <div className="flex-1">
               <h2 className="text-3xl tracking-tight text-[#14284b] sm:text-4xl" style={serif}>Let's find where your student should start.</h2>
               <p className="mt-3 text-lg leading-8 text-slate-600">The first consultation is free. Tell me about your student's class and goals, and I'll suggest a clear next step.</p>
+              <p className="mt-3 text-sm text-slate-500">Email <a href={CONTACT_URL} className="font-semibold text-[#14284b] underline underline-offset-4">{CONTACT_EMAIL}</a> · {HOURS}</p>
             </div>
             <Cta className="flex-none" />
           </div>
