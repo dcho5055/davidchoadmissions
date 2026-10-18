@@ -1,6 +1,6 @@
 // Single place to change how families reach IMT Academy.
 const CONTACT_EMAIL = "dcho5055@gmail.com";
-const CONTACT_URL = `mailto:${CONTACT_EMAIL}?subject=IMT%20Academy%20%E2%80%94%20Free%20Consultation&body=Student%20grade%3A%0ACourse%2Fsubject%3A%0AYour%20time%20zone%3A%0A`;
+const CONTACT_URL = `mailto:${CONTACT_EMAIL}?subject=IMT%20Academy%20%E2%80%94%20Free%20Math%20Gap%20Diagnosis&body=Student%20grade%3A%0ACourse%2Fsubject%3A%0AYour%20time%20zone%3A%0A`;
 const HOURS = "Weekday evenings 6–10 PM ET · Weekends";
 
 const paths = {
@@ -20,8 +20,8 @@ function Icon({ name, className = "h-5 w-5" }) {
 const credentials = [
   { k: "30 years", v: "in education — classroom, college, and 1:1 tutoring" },
   { k: "Dual-certified", v: "U.S. state license in Mathematics K–12 and English Language Learner K–12" },
-  { k: "USC", v: "Master of Arts in Teaching" },
-  { k: "Former", v: "California public middle & high school math teacher" },
+  { k: "12 years", v: "of Top 30 college admits, every year, from the learning center I ran" },
+  { k: "USC", v: "Master of Arts in Teaching · former California public school math teacher" },
 ];
 
 const courses = [
@@ -34,16 +34,16 @@ const courses = [
 ];
 
 const steps = [
-  { n: "1", title: "Free consultation", text: "We talk about your student's class, grades, and goals. Parents can speak in English or Korean." },
-  { n: "2", title: "Diagnostic session", text: "I find exactly where your student is strong, where the gaps are, and why mistakes keep happening." },
-  { n: "3", title: "Personal plan", text: "A plan built around the school calendar, upcoming tests, and the student's own pace." },
+  { n: "1", title: "Free Math Gap Diagnosis", text: "A 30-minute session where I find exactly where your student is strong, where the gaps are, and why mistakes keep happening." },
+  { n: "2", title: "Written report", text: "You receive a short written report of what I found. Parent consultation in English or Korean." },
+  { n: "3", title: "Personal plan", text: "A plan built around the school calendar, upcoming tests, the student's own pace, and college goals." },
   { n: "4", title: "1:1 online lessons", text: "Live lessons with me — not a different tutor each week — plus regular progress updates for parents." },
 ];
 
 const reasons = [
   { title: "Certified in math and in English learning", text: "I hold U.S. state licenses in both Mathematics (K–12) and English Language Learners (K–12). When a student is stuck on the wording, not the math, I can see it and teach both." },
   { title: "Diagnosis before drilling", text: "More worksheets don't fix a missing foundation. I find the real reason a student is stuck, then fix that first." },
-  { title: "Built for the 11th-grade AP year", text: "Grades often drop when AP courses pile up in junior year. We build the foundation, study habits, and course plan before that happens." },
+  { title: "Math is where college plans are won or lost", text: "The right course sequence, AP choices, and grades that hold up in the 11th-grade AP year. Having guided students to Top 30 universities, I plan math with college in mind." },
   { title: "One teacher who knows U.S. classrooms", text: "I taught math in California public middle and high schools, so I know how teachers grade and how tests are written. Parent updates in English or Korean." },
 ];
 
@@ -106,15 +106,15 @@ const reviews = [
 
 const faqs = [
   { q: "Are lessons online?", a: "Yes. All lessons are live 1:1 sessions on Zoom with screen sharing, so students anywhere in the U.S. can join from home." },
-  { q: "When are lessons available?", a: "Weekday evenings 6–10 PM Eastern Time, plus weekend mornings and afternoons. We set a regular weekly time after the consultation." },
+  { q: "When are lessons available?", a: "Weekday evenings 6–10 PM Eastern Time, plus weekend mornings and afternoons. We set a regular weekly time after the free diagnosis." },
   { q: "How long is each lesson?", a: "Most lessons are 60 or 90 minutes. For AP and SAT students, 90 minutes usually works best." },
-  { q: "How much does tutoring cost?", a: "Lessons start at $150/hour, and SAT Math and AP courses are $180/hour. After the free consultation, I'll send a plan with the exact schedule and pricing." },
+  { q: "How much does tutoring cost?", a: "Lessons start at $150/hour, and SAT Math and AP courses are $180/hour. After the free diagnosis, I'll send a plan with the exact schedule and pricing." },
   { q: "How often should my student meet?", a: "Most students meet once or twice a week. Before an SAT or AP exam, we may meet more often for a short period." },
   { q: "Who teaches the lessons?", a: "I do. Every lesson is taught by David Cho personally — a licensed math teacher (Iowa Standard License, Mathematics K–8 and 5–12) and former California public middle and high school math teacher." },
   { q: "Can I talk with you in Korean?", a: "Yes. Lessons are in English, and parent consultations and updates can be in English or Korean. 학부모 상담은 한국어로 가능합니다." },
 ];
 
-function Cta({ children = "Book a free consultation", variant = "dark", className = "" }) {
+function Cta({ children = "Get a free Math Gap Diagnosis", variant = "dark", className = "" }) {
   const styles = variant === "dark"
     ? "bg-[#14284b] text-white hover:bg-[#0e1d38]"
     : "bg-white text-[#14284b] hover:bg-[#eef2f8]";
@@ -150,13 +150,13 @@ export default function App() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">Math K–12 + English Language Learner certified</p>
             <h1 className="mt-5 text-5xl leading-[1.05] tracking-tight text-[#14284b] sm:text-6xl" style={serif}>
-              Math that finally makes sense — in every word.
+              Your child isn't bad at math. Something got missed.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-              Many students who "can't do math" are really stuck on the words — word problems, SAT questions, AP free-response. David Cho is a U.S. state-licensed teacher in both Mathematics and English Language Learners, with 30 years in education. He teaches the math and the language of math together, one-on-one.
+              A missed concept, a weak foundation, or the English behind word problems and AP free-response. David Cho — a U.S. state-licensed teacher in both Mathematics and English Language Learners, with 30 years in education — finds the gap first, then fixes it one-on-one.
             </p>
             <p className="mt-3 max-w-xl text-base leading-7 text-slate-500">
-              수학(K–12)과 영어학습자(ELL, K–12) 미국 정교사 자격을 모두 가진 30년 경력 선생님의 1:1 온라인 수학 수업. 학부모 상담은 한국어로 가능합니다.
+              아이가 수학을 못하는 게 아니라, 어딘가에서 구멍이 생긴 겁니다. 수학·ELL 미국 정교사 자격의 30년 경력 선생님이 무료 진단으로 그 구멍부터 찾아드립니다. 학부모 상담은 한국어로 가능합니다.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Cta />
@@ -196,7 +196,7 @@ export default function App() {
             ))}
             <article className="flex flex-col justify-between rounded-3xl bg-[#14284b] p-7 text-white lg:col-span-3 lg:flex-row lg:items-center">
               <p className="text-lg leading-8 text-white/85">Not sure where your student should start?</p>
-              <Cta variant="light" className="mt-6 self-start lg:mt-0 lg:self-center">Ask for a diagnosis</Cta>
+              <Cta variant="light" className="mt-6 self-start lg:mt-0 lg:self-center">Get a free diagnosis</Cta>
             </article>
           </div>
         </section>
@@ -213,7 +213,7 @@ export default function App() {
                 </li>
               ))}
             </ul>
-            <Cta variant="light" className="mt-10">Find the gap — book a free diagnosis</Cta>
+            <Cta variant="light" className="mt-10">Find the gap — free diagnosis</Cta>
           </div>
         </section>
 
@@ -314,8 +314,8 @@ export default function App() {
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 overflow-hidden rounded-[2rem] bg-white p-10 text-center shadow-sm sm:p-14 lg:flex-row lg:text-left">
             <img src="/images/portrait.jpg" alt="David Cho" loading="lazy" className="h-40 w-40 flex-none rounded-full object-cover object-top" />
             <div className="flex-1">
-              <h2 className="text-3xl tracking-tight text-[#14284b] sm:text-4xl" style={serif}>Let's find where your student should start.</h2>
-              <p className="mt-3 text-lg leading-8 text-slate-600">The first consultation is free. Tell me about your student's class and goals, and I'll suggest a clear next step.</p>
+              <h2 className="text-3xl tracking-tight text-[#14284b] sm:text-4xl" style={serif}>Find the gap before it gets bigger.</h2>
+              <p className="mt-3 text-lg leading-8 text-slate-600">The Math Gap Diagnosis is free: 30 minutes with your student, then a short written report. I teach a limited number of students each semester.</p>
               <p className="mt-3 text-sm text-slate-500">Email <a href={CONTACT_URL} className="font-semibold text-[#14284b] underline underline-offset-4">{CONTACT_EMAIL}</a> · {HOURS}</p>
             </div>
             <Cta className="flex-none" />
