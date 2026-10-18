@@ -150,13 +150,13 @@ export default function App() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">Math K–12 + English Language Learner certified</p>
             <h1 className="mt-5 text-5xl leading-[1.05] tracking-tight text-[#14284b] sm:text-6xl" style={serif}>
-              Your child isn't bad at math. Something got missed.
+              Thirty years of teaching.<br />One student at a time.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-              A missed concept, a weak foundation, or the English behind word problems and AP free-response. David Cho — a U.S. state-licensed teacher in both Mathematics and English Language Learners, with 30 years in education — finds the gap first, then fixes it one-on-one.
+              Every student gets stuck for a reason — a missed concept, a weak foundation, or the English behind word problems and AP free-response. David Cho, a U.S. state-licensed teacher in both Mathematics and English Language Learners, finds that reason first, then fixes it one-on-one.
             </p>
             <p className="mt-3 max-w-xl text-base leading-7 text-slate-500">
-              아이가 수학을 못하는 게 아니라, 어딘가에서 구멍이 생긴 겁니다. 수학·ELL 미국 정교사 자격의 30년 경력 선생님이 무료 진단으로 그 구멍부터 찾아드립니다. 학부모 상담은 한국어로 가능합니다.
+              30년의 교육 경력, 한 번에 한 학생에게. 수학·영어학습자(ELL) 미국 정교사 자격을 가진 선생님이 무료 진단으로 아이가 막힌 지점부터 찾아드립니다. 학부모 상담은 한국어로 가능합니다.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Cta />
