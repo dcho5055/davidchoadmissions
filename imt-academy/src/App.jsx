@@ -18,10 +18,10 @@ function Icon({ name, className = "h-5 w-5" }) {
 }
 
 const credentials = [
-  { k: "30 years", v: "in education — classroom, college, and 1:1 tutoring" },
-  { k: "Dual-certified", v: "U.S. state license in Mathematics K–12 and English Language Learner K–12" },
-  { k: "12 years", v: "of Top 30 college admits, every year, from the learning center I ran" },
-  { k: "USC", v: "Master of Arts in Teaching · former California public school math teacher" },
+  { k: "30 years", v: "Not one student whose grades didn't improve" },
+  { k: "Near 800", v: "Where most of my SAT Math students finish" },
+  { k: "12 years", v: "Top 30 college admits, every year, from the learning center I ran" },
+  { k: "Licensed", v: "U.S. teacher — Mathematics K–12 & English Language Learner K–12" },
 ];
 
 const courses = [
@@ -148,15 +148,15 @@ export default function App() {
       <main id="top">
         <section className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-20 pt-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:pt-20">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">Math K–12 + English Language Learner certified</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">1:1 Online Math Tutoring · Licensed U.S. Teacher</p>
             <h1 className="mt-5 text-5xl leading-[1.05] tracking-tight text-[#14284b] sm:text-6xl" style={serif}>
-              Thirty years of teaching.<br />One student at a time.
+              Every student improves.<br />Some just take longer.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-              Every student gets stuck for a reason — a missed concept, a weak foundation, or the English behind word problems and AP free-response. David Cho, a U.S. state-licensed teacher in both Mathematics and English Language Learners, finds that reason first, then fixes it one-on-one.
+              In 30 years of teaching, I haven't had a student whose grades didn't go up. Most of my SAT Math students finish near 800. Students I've taught have gone on to Yale, Princeton, Stanford, UC Berkeley, UCLA, USC, and Northeastern.
             </p>
             <p className="mt-3 max-w-xl text-base leading-7 text-slate-500">
-              30년의 교육 경력, 한 번에 한 학생에게. 수학·영어학습자(ELL) 미국 정교사 자격을 가진 선생님이 무료 진단으로 아이가 막힌 지점부터 찾아드립니다. 학부모 상담은 한국어로 가능합니다.
+              30년 동안 성적이 오르지 않은 학생은 없었습니다. 시간이 더 걸린 학생이 있었을 뿐입니다. 학부모 상담은 한국어로 가능합니다.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Cta />
@@ -179,6 +179,9 @@ export default function App() {
               </div>
             ))}
           </dl>
+          <p className="border-t border-black/5 px-4 py-5 text-center text-sm tracking-wide text-slate-500 sm:px-6">
+            Students I've taught went on to <span className="font-semibold text-[#14284b]">Yale · Princeton · Stanford · UC Berkeley · UCLA · USC · Northeastern</span>
+          </p>
         </section>
 
         <section id="courses" className="scroll-mt-20 mx-auto max-w-6xl px-4 py-24 sm:px-6">
