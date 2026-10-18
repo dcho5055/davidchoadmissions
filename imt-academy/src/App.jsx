@@ -58,6 +58,14 @@ const signs = [
 
 const reviews = [
   {
+    who: "Jihyun K.",
+    role: "Parent",
+    text: [
+      "I interviewed many tutors and tried some but my kids' tutor at IMT is the best. They enjoy learning math and I am really happy to see their progress.",
+      "My son asked me to let him learn from the tutor until he finishes high school after his first lesson.",
+    ],
+  },
+  {
     who: "GaYoung L.",
     role: "Parent",
     text: [
@@ -66,9 +74,18 @@ const reviews = [
     ],
   },
   {
-    who: "Brianna K.",
+    who: "Zion K.",
+    role: "Parent",
+    text: [
+      "Expert instructors, personalized attention, and an engaging approach transformed my child's math skills. Regular progress updates and increased confidence really made this academy a top choice for quality math education.",
+    ],
+  },
+  {
+    who: "Elise K.",
     role: "Student",
-    text: ["My grades got so much better after coming here."],
+    text: [
+      "My tutor helps me with math and whenever I don't understand anything he explains it very well. I understand math much better than before and he has helped me learn new things very easily.",
+    ],
   },
 ];
 
@@ -233,7 +250,7 @@ export default function App() {
         <section className="mx-auto max-w-6xl px-4 pt-24 sm:px-6">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">What families say</p>
           <h2 className="mt-4 text-4xl tracking-tight text-[#14284b]" style={serif}>From our Google reviews</h2>
-          <div className="mt-10 grid gap-5 lg:grid-cols-[1.4fr_1fr]">
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
             {reviews.map((r) => (
               <figure key={r.who} className="flex flex-col justify-between rounded-3xl border border-black/5 bg-white p-8">
                 <div>
