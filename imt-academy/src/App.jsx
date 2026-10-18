@@ -56,6 +56,22 @@ const signs = [
   "Keeps making the same mistakes, and nobody has found out why",
 ];
 
+const reviews = [
+  {
+    who: "GaYoung L.",
+    role: "Parent",
+    text: [
+      "I know finding a tutor who not only excels in their subject matter but also connects well with children is a rare gem, and we are thrilled to have found one.",
+      "Math has always been a challenging subject for my son, but his consistent support and reassurance built my son's confidence tremendously.",
+    ],
+  },
+  {
+    who: "Brianna K.",
+    role: "Student",
+    text: ["My grades got so much better after coming here."],
+  },
+];
+
 const faqs = [
   { q: "Are lessons online?", a: "Yes. All lessons are live 1:1 sessions on Zoom with screen sharing, so students anywhere in the U.S. can join from home." },
   { q: "When are lessons available?", a: "Weekday evenings 6–10 PM Eastern Time, plus weekend mornings and afternoons. We set a regular weekly time after the consultation." },
@@ -211,6 +227,24 @@ export default function App() {
               “This student first came to me because math was the weak spot. After two years of steady work: straight A's in high school, and admission to Northeastern University — with a plan for medical school.”
             </blockquote>
             <p className="mt-6 text-white/70">We focused on math and science, built steady study habits, and planned ahead instead of cramming.</p>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-4 pt-24 sm:px-6">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">What families say</p>
+          <h2 className="mt-4 text-4xl tracking-tight text-[#14284b]" style={serif}>From our Google reviews</h2>
+          <div className="mt-10 grid gap-5 lg:grid-cols-[1.4fr_1fr]">
+            {reviews.map((r) => (
+              <figure key={r.who} className="flex flex-col justify-between rounded-3xl border border-black/5 bg-white p-8">
+                <div>
+                  <p className="text-[#e0a100]" aria-label="5 out of 5 stars">★★★★★</p>
+                  <blockquote className="mt-4 space-y-4 text-lg leading-8 text-slate-700">
+                    {r.text.map((t) => <p key={t}>“{t}”</p>)}
+                  </blockquote>
+                </div>
+                <figcaption className="mt-6 text-sm text-slate-500"><span className="font-semibold text-[#14284b]">{r.who}</span> · {r.role} · Google review</figcaption>
+              </figure>
+            ))}
           </div>
         </section>
 
