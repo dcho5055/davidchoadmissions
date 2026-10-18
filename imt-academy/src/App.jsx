@@ -134,7 +134,7 @@ function Cta({ children = "Get a free Math Gap Diagnosis", variant = "dark", cla
   );
 }
 
-const serif = { fontFamily: "Fraunces, Georgia, serif" };
+const serif = { fontFamily: "'Plus Jakarta Sans', Inter, system-ui, sans-serif", fontWeight: 700, letterSpacing: "-0.025em" };
 
 export default function App() {
   return (
@@ -159,7 +159,7 @@ export default function App() {
         <section className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-20 pt-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:pt-20">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">1:1 Online Math Tutoring · Licensed U.S. Teacher</p>
-            <h1 className="mt-5 text-5xl leading-[1.05] tracking-tight text-[#14284b] sm:text-6xl" style={serif}>
+            <h1 className="mt-5 text-[2.5rem] leading-[1.12] text-[#14284b] sm:text-5xl lg:text-[3rem]" style={serif}>
               Every student improves.<br />Some just take longer.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
