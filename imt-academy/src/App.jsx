@@ -19,7 +19,7 @@ function Icon({ name, className = "h-5 w-5" }) {
 
 const credentials = [
   { k: "30 years", v: "in education — classroom, college, and 1:1 tutoring" },
-  { k: "Licensed", v: "Iowa Standard Teaching License — Mathematics K–12 & English Language Learner" },
+  { k: "Dual-certified", v: "U.S. state license in Mathematics K–12 and English Language Learner K–12" },
   { k: "USC", v: "Master of Arts in Teaching" },
   { k: "Former", v: "California public middle & high school math teacher" },
 ];
@@ -41,10 +41,19 @@ const steps = [
 ];
 
 const reasons = [
-  { title: "A teacher, not just a tutor", text: "I've taught math in U.S. public middle and high schools and hold a state teaching license in mathematics. I know what teachers expect and how tests are written." },
+  { title: "Certified in math and in English learning", text: "I hold U.S. state licenses in both Mathematics (K–12) and English Language Learners (K–12). When a student is stuck on the wording, not the math, I can see it and teach both." },
   { title: "Diagnosis before drilling", text: "More worksheets don't fix a missing foundation. I find the real reason a student is stuck, then fix that first." },
-  { title: "Built for 11th grade", text: "Many students' grades drop when AP courses pile up in junior year. We build the foundation and study habits before that happens." },
-  { title: "Parents stay in the loop", text: "Clear progress updates in English or Korean, so you always know how your child is doing." },
+  { title: "Built for the 11th-grade AP year", text: "Grades often drop when AP courses pile up in junior year. We build the foundation, study habits, and course plan before that happens." },
+  { title: "One teacher who knows U.S. classrooms", text: "I taught math in California public middle and high schools, so I know how teachers grade and how tests are written. Parent updates in English or Korean." },
+];
+
+const signs = [
+  "Does fine on calculations, but loses points on word problems",
+  "Grades dropped when AP or honors classes started",
+  "Understands in class, then freezes on tests",
+  "Studies hard, but SAT Math scores won't move",
+  "Reads English well in daily life, but academic wording slows them down",
+  "Keeps making the same mistakes, and nobody has found out why",
 ];
 
 const faqs = [
@@ -91,15 +100,15 @@ export default function App() {
       <main id="top">
         <section className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-20 pt-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:pt-20">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">1:1 Online Math Tutoring</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">Math K–12 + English Language Learner certified</p>
             <h1 className="mt-5 text-5xl leading-[1.05] tracking-tight text-[#14284b] sm:text-6xl" style={serif}>
-              Math that finally makes sense.
+              Math that finally makes sense — in every word.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-              SAT Math, AP Calculus, and school math, taught one-on-one by David Cho — a U.S. state-licensed math teacher (Mathematics K–12) with 30 years in education.
+              Many students who "can't do math" are really stuck on the words — word problems, SAT questions, AP free-response. David Cho is a U.S. state-licensed teacher in both Mathematics and English Language Learners, with 30 years in education. He teaches the math and the language of math together, one-on-one.
             </p>
             <p className="mt-3 max-w-xl text-base leading-7 text-slate-500">
-              미국 정교사 자격을 가진 30년 경력 선생님의 1:1 온라인 수학 수업. 학부모 상담은 한국어로 가능합니다.
+              수학(K–12)과 영어학습자(ELL, K–12) 미국 정교사 자격을 모두 가진 30년 경력 선생님의 1:1 온라인 수학 수업. 학부모 상담은 한국어로 가능합니다.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Cta />
@@ -144,12 +153,28 @@ export default function App() {
           </div>
         </section>
 
+        <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
+          <div className="rounded-[2rem] bg-[#14284b] p-8 text-white sm:p-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#e9b98a]">Does this sound like your student?</p>
+            <h2 className="mt-4 max-w-3xl text-3xl leading-snug tracking-tight sm:text-4xl" style={serif}>Usually it isn't a "math person" problem. It's a gap nobody has found yet.</h2>
+            <ul className="mt-10 grid gap-x-10 gap-y-5 md:grid-cols-2">
+              {signs.map((t) => (
+                <li key={t} className="flex gap-3 text-lg leading-7 text-white/90">
+                  <span className="mt-1 flex h-6 w-6 flex-none items-center justify-center rounded-full bg-[#e9b98a]/20 text-[#e9b98a]"><Icon name="check" className="h-3.5 w-3.5" /></span>
+                  {t}
+                </li>
+              ))}
+            </ul>
+            <Cta variant="light" className="mt-10">Find the gap — book a free diagnosis</Cta>
+          </div>
+        </section>
+
         <section className="bg-white py-24">
           <div className="mx-auto grid max-w-6xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr]">
             <img src="/images/notes.jpg" alt="David Cho holding lesson notes" loading="lazy" className="aspect-[4/5] w-full rounded-[2rem] object-cover object-top" />
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">Why families choose IMT</p>
-              <h2 className="mt-4 text-4xl tracking-tight text-[#14284b]" style={serif}>Math can't be fixed overnight. It can be fixed the right way.</h2>
+              <h2 className="mt-4 text-4xl tracking-tight text-[#14284b]" style={serif}>Not just another tutor. A licensed teacher in math and in English learning.</h2>
               <div className="mt-10 grid gap-8 sm:grid-cols-2">
                 {reasons.map((r) => (
                   <div key={r.title}>
@@ -195,7 +220,7 @@ export default function App() {
             <h2 className="mt-4 text-3xl leading-snug tracking-tight text-[#14284b] sm:text-4xl">상담과 진행 보고는 한국어로 편하게 하실 수 있습니다.</h2>
             <div className="mt-6 grid gap-6 text-base leading-8 text-slate-600 md:grid-cols-3">
               <p><span className="font-semibold text-[#14284b]">미국 정교사 자격</span><br />Iowa Standard Teaching License — 수학(K–8, 5–12) 및 영어학습자(K–12) 과목 인증.</p>
-              <p><span className="font-semibold text-[#14284b]">진단부터 시작합니다</span><br />문제를 더 풀리기 전에, 아이가 어디서 왜 막히는지부터 정확히 찾아냅니다.</p>
+              <p><span className="font-semibold text-[#14284b]">수학이 아니라 영어에서 막힐 때</span><br />문장제, SAT, AP 서술형에서 점수가 깎이는 이유가 영어 표현인 경우가 많습니다. 수학과 ELL 자격으로 둘 다 잡습니다.</p>
               <p><span className="font-semibold text-[#14284b]">수업은 영어, 상담은 한국어</span><br />수업은 학교와 같은 영어로, 학부모님 상담과 진행 보고는 한국어로 드립니다.</p>
             </div>
           </div>
