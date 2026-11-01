@@ -1,7 +1,12 @@
+import { reviews } from "./content/reviews.js";
+
 // Single place to change how families reach IMT Academy.
 const CONTACT_EMAIL = "dcho5055@gmail.com";
-const CONTACT_URL = `mailto:${CONTACT_EMAIL}?subject=IMT%20Academy%20%E2%80%94%20Free%20Math%20Gap%20Diagnosis&body=Student%20grade%3A%0ACourse%2Fsubject%3A%0AYour%20time%20zone%3A%0A`;
 const KAKAO_URL = "https://pf.kakao.com/_xkcnmX/chat";
+
+function contactUrl(c) {
+  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(c.mailSubject)}&body=${encodeURIComponent(c.mailBody)}`;
+}
 
 function KakaoButton({ className = "", children = "카카오톡 상담" }) {
   return (
@@ -11,8 +16,6 @@ function KakaoButton({ className = "", children = "카카오톡 상담" }) {
     </a>
   );
 }
-
-const HOURS = "Weekday evenings 6–10 PM ET · Weekends";
 
 const paths = {
   arrow: "M5 12h14M13 5l7 7-7 7",
@@ -28,142 +31,44 @@ function Icon({ name, className = "h-5 w-5" }) {
   );
 }
 
-const credentials = [
-  { k: "30 years", v: "Every student who stayed with me improved" },
-  { k: "School + SAT", v: "Classroom math and SAT taught as one connected skill" },
-  { k: "12 years", v: "Top 30 college admits, every year, from the learning center I ran" },
-  { k: "Licensed", v: "U.S. teacher — Mathematics K–12 & English Language Learner K–12" },
-];
-
-const courses = [
-  { name: "SAT Math", level: "Grades 9–12", text: "Real understanding of every question type, so students can handle problems they've never seen — and the score rises with it." },
-  { name: "AP Calculus AB / BC", level: "Grades 11–12", text: "Concepts first, then exam-style multiple choice and free-response writing." },
-  { name: "AP Precalculus · Precalculus", level: "Grades 10–12", text: "Functions, trigonometry, and the habits students need before calculus — including AP Precalculus exam prep." },
-  { name: "AP Statistics", level: "Grades 10–12", text: "Data, probability, and inference explained clearly, with practice on AP-style free-response questions." },
-  { name: "Algebra I · Geometry · Algebra II", level: "Grades 8–11", text: "Keep up with class, raise grades, and close the gaps that slow students down later." },
-  { name: "Middle School Math", level: "Grades 6–8", text: "Build a solid foundation early, before math gets harder and grades start to count." },
-];
-
-const steps = [
-  { n: "1", title: "Free Math Gap Diagnosis", text: "A 30-minute session where I find exactly where your student is strong, where the gaps are, and why mistakes keep happening." },
-  { n: "2", title: "Written report", text: "You receive a short written report of what I found. Parent consultation in English or Korean." },
-  { n: "3", title: "Personal plan", text: "A plan built around the school calendar, upcoming tests, the student's own pace, and college goals." },
-  { n: "4", title: "1:1 online lessons", text: "Live lessons with me — not a different tutor each week — plus regular progress updates for parents." },
-];
-
-const reasons = [
-  { title: "School math and SAT, taught together", text: "I know how school teachers grade and how SAT questions are built. Students who get help with their school math learn to apply it the way the SAT asks, so SAT prep isn't a separate mountain to climb later." },
-  { title: "Diagnosis before drilling", text: "More worksheets don't fix a missing foundation. I find the real reason a student is stuck, then fix that first." },
-  { title: "I know students, not just math", text: "After years of admissions advising and working with many students, I know what's behind a stalled student — fear of failing, burnout, or not seeing the point. I help students want to work, and I plan their math with college in mind." },
-  { title: "Ready for English-heavy math", text: "As a licensed English Language Learner teacher (K–12), I can spot when a student is stuck on the wording, not the math. Korean students still building academic English can get ready early for word problems, AP free response, and the SAT." },
-];
-
-const signs = [
-  "Does fine on calculations, but loses points on word problems",
-  "Grades dropped when AP or honors classes started",
-  "Understands in class, then freezes on tests",
-  "Studies hard, but SAT Math scores won't move",
-  "Reads English well in daily life, but academic wording slows them down",
-  "Keeps making the same mistakes, and nobody has found out why",
-];
-
-const career = [
-  { k: "USC", v: "Master of Arts in Teaching" },
-  { k: "California public schools", v: "Math teacher at Madrona Middle School (Torrance) and Ánimo Venice Charter High School (Los Angeles)" },
-  { k: "Santa Monica College · Glendale College", v: "Adjunct Professor" },
-  { k: "12 years", v: "Ran a learning center with Top 30 college admits every year" },
-  { k: "Iowa Standard Teaching License", v: "Mathematics K–12 · English Language Learner K–12" },
-  { k: "Today", v: "1:1 online math tutoring and college admissions advising" },
-];
-
-const reviews = [
-  {
-    who: "Jihyun K.",
-    role: "Parent",
-    text: [
-      "I interviewed many tutors and tried some but my kids' tutor at IMT is the best. They enjoy learning math and I am really happy to see their progress.",
-      "My son asked me to let him learn from the tutor until he finishes high school after his first lesson.",
-    ],
-  },
-  {
-    who: "Woosung L.",
-    role: "Parent",
-    text: [
-      "Unlike other academies where they feel like it's not helpful and don't want to go, here they want to come because they feel they are actually benefiting from it.",
-      "Our kids had no idea that studying could be this easy and enjoyable.",
-    ],
-  },
-  {
-    who: "GaYoung L.",
-    role: "Parent",
-    text: [
-      "I know finding a tutor who not only excels in their subject matter but also connects well with children is a rare gem, and we are thrilled to have found one.",
-      "Math has always been a challenging subject for my son, but his consistent support and reassurance built my son's confidence tremendously.",
-    ],
-  },
-  {
-    who: "Yireh K.",
-    role: "Student",
-    text: [
-      "It's been a game-changer for my grades and my enjoyment of studying, especially as I prepare for TJ (Thomas Jefferson High School for Science and Technology).",
-    ],
-  },
-  {
-    who: "Zion K.",
-    role: "Parent",
-    text: [
-      "Expert instructors, personalized attention, and an engaging approach transformed my child's math skills. Regular progress updates and increased confidence really made this academy a top choice for quality math education.",
-    ],
-  },
-  {
-    who: "Elise K.",
-    role: "Student",
-    text: [
-      "My tutor helps me with math and whenever I don't understand anything he explains it very well. I understand math much better than before and he has helped me learn new things very easily.",
-    ],
-  },
-];
-
-const faqs = [
-  { q: "Are lessons online?", a: "Yes. All lessons are live 1:1 sessions on Zoom with screen sharing, so students anywhere in the U.S. can join from home." },
-  { q: "When are lessons available?", a: "Weekday evenings 6–10 PM Eastern Time, plus weekend mornings and afternoons. We set a regular weekly time after the free diagnosis." },
-  { q: "How long is each lesson?", a: "Most lessons are 60 or 90 minutes. For AP and SAT students, 90 minutes usually works best." },
-  { q: "How much does tutoring cost?", a: "Lessons are purchased as hour packages, and larger packages bring the hourly rate down. Pricing depends on your student's grade, course, and how often we meet. After the free diagnosis, I'll send a plan with the exact schedule and package options." },
-  { q: "How soon will we see results?", a: "It depends on the student and the size of the gap. After the free diagnosis, I'll give you a realistic timeline for your student." },
-  { q: "How often should my student meet?", a: "Most students start with one lesson a week. Before an SAT or AP exam, we may add sessions for a short period." },
-  { q: "Who teaches the lessons?", a: "I do. Every lesson is taught by David Cho personally — a licensed math teacher (Iowa Standard License, Mathematics K–8 and 5–12) and former California public middle and high school math teacher." },
-  { q: "Can I talk with you in Korean?", a: "Yes. Lessons are in English, and parent consultations and updates can be in English or Korean. 학부모 상담은 한국어로 가능합니다." },
-];
-
-function Cta({ children = "Get a free Math Gap Diagnosis", variant = "dark", className = "" }) {
+function Cta({ href, children, variant = "dark", className = "" }) {
   const styles = variant === "dark"
     ? "bg-[#14284b] text-white hover:bg-[#0e1d38]"
     : "bg-white text-[#14284b] hover:bg-[#eef2f8]";
   return (
-    <a href={CONTACT_URL} className={`inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-base font-semibold transition ${styles} ${className}`}>
+    <a href={href} className={`inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-base font-semibold transition ${styles} ${className}`}>
       {children} <Icon name="arrow" className="h-4 w-4" />
     </a>
   );
 }
 
-const serif = { fontFamily: "'Plus Jakarta Sans', Inter, system-ui, sans-serif", fontWeight: 700, letterSpacing: "-0.025em" };
+const serif = { fontFamily: "'Plus Jakarta Sans', Inter, 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif", fontWeight: 700, letterSpacing: "-0.025em" };
+const colleges = "Yale · Princeton · Stanford · UC Berkeley · UCLA · USC · Northeastern";
 
-export default function App() {
+export default function App({ c }) {
+  const href = contactUrl(c);
+  const ko = c.lang === "ko";
+  const eyebrow = ko ? "text-sm font-semibold tracking-[0.08em] text-[#b5651d]" : "text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]";
+  const eyebrowLight = ko ? "text-sm font-semibold tracking-[0.08em] text-[#e9b98a]" : "text-sm font-semibold uppercase tracking-[0.2em] text-[#e9b98a]";
+  const kw = ko ? { wordBreak: "keep-all" } : undefined;
+
   return (
-    <div className="min-h-screen bg-[#f7f6f2] text-[#14181f]" style={{ fontFamily: "Inter, 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif" }}>
+    <div lang={c.lang} className="min-h-screen bg-[#f7f6f2] text-[#14181f]" style={{ fontFamily: "Inter, 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif", ...kw }}>
       <header className="sticky top-0 z-30 border-b border-black/5 bg-[#f7f6f2]/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
           <a href="#top" className="flex items-baseline gap-2">
             <span className="text-xl font-semibold tracking-tight text-[#14284b]" style={serif}>IMT Academy</span>
-            <span className="hidden text-xs font-medium uppercase tracking-[0.18em] text-slate-500 sm:inline">Math Tutoring</span>
+            <span className={`hidden text-xs font-medium text-slate-500 sm:inline ${ko ? "" : "uppercase tracking-[0.18em]"}`}>{c.brandSub}</span>
           </a>
-          <nav className="flex items-center gap-6 text-sm font-medium text-slate-600">
-            <a href="#courses" className="hidden hover:text-[#14284b] md:inline">Courses</a>
-            <a href="#about" className="hidden hover:text-[#14284b] md:inline">About</a>
-            <a href="#how" className="hidden hover:text-[#14284b] md:inline">How it works</a>
-            <a href="#faq" className="hidden hover:text-[#14284b] md:inline">FAQ</a>
-            <a href={KAKAO_URL} target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#FEE500] px-4 py-2 text-[#191919] hover:bg-[#f5dc00]" lang="ko">카톡 상담</a>
-            <a href={CONTACT_URL} className="hidden rounded-full bg-[#14284b] px-4 py-2 text-white hover:bg-[#0e1d38] sm:inline">Contact</a>
+          <nav className="flex items-center gap-4 text-sm font-medium text-slate-600 md:gap-6">
+            <a href="#courses" className="hidden hover:text-[#14284b] md:inline">{c.nav.courses}</a>
+            <a href="#about" className="hidden hover:text-[#14284b] md:inline">{c.nav.about}</a>
+            <a href="#how" className="hidden hover:text-[#14284b] lg:inline">{c.nav.how}</a>
+            <a href="#faq" className="hidden hover:text-[#14284b] md:inline">{c.nav.faq}</a>
+            <a href={c.switchHref} hrefLang={ko ? "en" : "ko"} lang={ko ? "en" : "ko"} className="rounded-full border border-black/10 px-3 py-1.5 hover:border-[#14284b] hover:text-[#14284b]">{c.switchLabel}</a>
+            {c.kakao
+              ? <a href={KAKAO_URL} target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#FEE500] px-4 py-2 text-[#191919] hover:bg-[#f5dc00]">카톡 상담</a>
+              : <a href={href} className="rounded-full bg-[#14284b] px-4 py-2 text-white hover:bg-[#0e1d38]">{c.nav.contact}</a>}
           </nav>
         </div>
       </header>
@@ -171,86 +76,81 @@ export default function App() {
       <main id="top">
         <section className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-20 pt-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:pt-20">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">1:1 Online Math Tutoring · Licensed U.S. Teacher</p>
-            <h1 className="mt-5 text-[2.5rem] leading-[1.12] text-[#14284b] sm:text-5xl lg:text-[3rem]" style={serif}>
-              Every student improves.<br />Some just take longer.
+            <p className={eyebrow}>{c.hero.eyebrow}</p>
+            <h1 className={`mt-5 leading-[1.18] text-[#14284b] ${ko ? "text-[2.1rem] sm:text-[2.6rem] lg:text-[2.75rem]" : "text-[2.5rem] sm:text-5xl lg:text-[3rem]"}`} style={serif}>
+              {c.hero.title[0]}<br />{c.hero.title[1]}
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-              In 30 years of teaching, every student who stayed with me improved. As a U.S. school math teacher and SAT instructor, I teach school math so students see how it shows up on the SAT — they build the problem-solving skills the test rewards while keeping up in class, and the scores follow. Students I've taught have gone on to Yale, Princeton, Stanford, UC Berkeley, UCLA, USC, and Northeastern.
-            </p>
-            <p className="mt-3 max-w-xl text-base leading-7 text-slate-500">
-              꾸준히 공부한 학생은 모두 성적이 올랐습니다. 학교에서 배우는 내용이 SAT에서 어떻게 응용되는지 수업 속에서 연결해 주기 때문에, 점수는 그 결과로 따라옵니다. 학부모 상담은 한국어로 가능합니다.
-            </p>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">{c.hero.intro}</p>
+            {c.hero.note && <p className="mt-3 max-w-xl text-base leading-7 text-slate-500">{c.hero.note}</p>}
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Cta />
-              <KakaoButton />
+              {c.kakao ? <><KakaoButton /><Cta href={href}>{c.cta}</Cta></> : <Cta href={href}>{c.cta}</Cta>}
             </div>
-            <p className="mt-5 text-sm font-medium text-slate-500">Lessons: {HOURS}</p>
+            <p className="mt-5 text-sm font-medium text-slate-500">{c.hoursLabel}: {c.hours}</p>
           </div>
           <div className="relative mx-auto w-full max-w-md lg:max-w-none">
             <div className="absolute -left-4 -top-4 hidden h-full w-full rounded-[2rem] border-2 border-[#b5651d]/30 lg:block" />
-            <img src="/images/point.jpg" alt="David Cho, math teacher" className="relative aspect-[4/5] w-full rounded-[2rem] object-cover object-top shadow-[0_30px_60px_rgba(20,40,75,0.18)]" />
+            <img src="/images/point.jpg" alt={c.hero.imgAlt} className="relative aspect-[4/5] w-full rounded-[2rem] object-cover object-top shadow-[0_30px_60px_rgba(20,40,75,0.18)]" />
           </div>
         </section>
 
         <section className="border-y border-black/5 bg-white">
           <dl className="mx-auto grid max-w-6xl grid-cols-2 gap-px bg-black/5 lg:grid-cols-4">
-            {credentials.map((c) => (
-              <div key={c.k} className="bg-white px-4 py-7 sm:px-6">
-                <dt className="text-2xl text-[#14284b]" style={serif}>{c.k}</dt>
-                <dd className="mt-1 text-sm leading-6 text-slate-600">{c.v}</dd>
+            {c.credentials.map((x) => (
+              <div key={x.k} className="bg-white px-4 py-7 sm:px-6">
+                <dt className="text-2xl text-[#14284b]" style={serif}>{x.k}</dt>
+                <dd className="mt-1 text-sm leading-6 text-slate-600">{x.v}</dd>
               </div>
             ))}
           </dl>
           <p className="border-t border-black/5 px-4 py-5 text-center text-sm tracking-wide text-slate-500 sm:px-6">
-            Students I've taught went on to <span className="font-semibold text-[#14284b]">Yale · Princeton · Stanford · UC Berkeley · UCLA · USC · Northeastern</span>
+            {c.collegesPrefix} <span className="font-semibold text-[#14284b]" lang="en">{colleges}</span>
           </p>
         </section>
 
         <section id="courses" className="scroll-mt-20 mx-auto max-w-6xl px-4 py-24 sm:px-6">
           <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">Courses</p>
-            <h2 className="mt-4 text-4xl tracking-tight text-[#14284b]" style={serif}>From middle school foundations to AP Calculus</h2>
+            <p className={eyebrow}>{c.courses.eyebrow}</p>
+            <h2 className="mt-4 text-4xl tracking-tight text-[#14284b]" style={serif}>{c.courses.title}</h2>
           </div>
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {courses.map((c) => (
-              <article key={c.name} className="rounded-3xl border border-black/5 bg-white p-7 shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">{c.level}</p>
-                <h3 className="mt-3 text-xl font-semibold text-[#14284b]">{c.name}</h3>
-                <p className="mt-3 leading-7 text-slate-600">{c.text}</p>
+            {c.courses.items.map((x) => (
+              <article key={x.name} className="rounded-3xl border border-black/5 bg-white p-7 shadow-sm">
+                <p className={`text-xs font-semibold text-slate-500 ${ko ? "" : "uppercase tracking-[0.16em]"}`}>{x.level}</p>
+                <h3 className="mt-3 text-xl font-semibold text-[#14284b]">{x.name}</h3>
+                <p className="mt-3 leading-7 text-slate-600">{x.text}</p>
               </article>
             ))}
             <article className="flex flex-col justify-between rounded-3xl bg-[#14284b] p-7 text-white lg:col-span-3 lg:flex-row lg:items-center">
-              <p className="text-lg leading-8 text-white/85">Not sure where your student should start?</p>
-              <Cta variant="light" className="mt-6 self-start lg:mt-0 lg:self-center">Get a free diagnosis</Cta>
+              <p className="text-lg leading-8 text-white/85">{c.courses.notSure}</p>
+              <Cta href={href} variant="light" className="mt-6 self-start lg:mt-0 lg:self-center">{c.courses.notSureCta}</Cta>
             </article>
           </div>
         </section>
 
         <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
           <div className="rounded-[2rem] bg-[#14284b] p-8 text-white sm:p-12">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#e9b98a]">Does this sound like your student?</p>
-            <h2 className="mt-4 max-w-3xl text-3xl leading-snug tracking-tight sm:text-4xl" style={serif}>Usually it isn't a "math person" problem. It's a gap nobody has found yet.</h2>
+            <p className={eyebrowLight}>{c.signs.eyebrow}</p>
+            <h2 className="mt-4 max-w-3xl text-3xl leading-snug tracking-tight sm:text-4xl" style={serif}>{c.signs.title}</h2>
             <ul className="mt-10 grid gap-x-10 gap-y-5 md:grid-cols-2">
-              {signs.map((t) => (
+              {c.signs.items.map((t) => (
                 <li key={t} className="flex gap-3 text-lg leading-7 text-white/90">
                   <span className="mt-1 flex h-6 w-6 flex-none items-center justify-center rounded-full bg-[#e9b98a]/20 text-[#e9b98a]"><Icon name="check" className="h-3.5 w-3.5" /></span>
                   {t}
                 </li>
               ))}
             </ul>
-            <Cta variant="light" className="mt-10">Find the gap — free diagnosis</Cta>
+            <Cta href={href} variant="light" className="mt-10">{c.signs.cta}</Cta>
           </div>
         </section>
 
         <section className="bg-white py-24">
           <div className="mx-auto grid max-w-6xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr]">
-            <img src="/images/notes.jpg" alt="David Cho holding lesson notes" loading="lazy" className="aspect-[4/5] w-full rounded-[2rem] object-cover object-top" />
+            <img src="/images/notes.jpg" alt={c.why.imgAlt} loading="lazy" className="aspect-[4/5] w-full rounded-[2rem] object-cover object-top" />
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">Why families choose IMT</p>
-              <h2 className="mt-4 text-4xl tracking-tight text-[#14284b]" style={serif}>Not just another tutor. A licensed teacher in math and in English learning.</h2>
+              <p className={eyebrow}>{c.why.eyebrow}</p>
+              <h2 className="mt-4 text-4xl leading-tight tracking-tight text-[#14284b]" style={serif}>{c.why.title}</h2>
               <div className="mt-10 grid gap-8 sm:grid-cols-2">
-                {reasons.map((r) => (
+                {c.why.items.map((r) => (
                   <div key={r.title}>
                     <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#f3e6d8] text-[#b5651d]"><Icon name="check" className="h-4 w-4" /></div>
                     <h3 className="mt-4 text-lg font-semibold text-[#14284b]">{r.title}</h3>
@@ -264,11 +164,11 @@ export default function App() {
 
         <section id="how" className="scroll-mt-20 mx-auto max-w-6xl px-4 py-24 sm:px-6">
           <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">How it works</p>
-            <h2 className="mt-4 text-4xl tracking-tight text-[#14284b]" style={serif}>Four steps, one teacher</h2>
+            <p className={eyebrow}>{c.how.eyebrow}</p>
+            <h2 className="mt-4 text-4xl tracking-tight text-[#14284b]" style={serif}>{c.how.title}</h2>
           </div>
           <ol className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {steps.map((s) => (
+            {c.how.steps.map((s) => (
               <li key={s.n} className="rounded-3xl border border-black/5 bg-white p-7">
                 <span className="text-4xl text-[#b5651d]" style={serif}>{s.n}</span>
                 <h3 className="mt-4 text-lg font-semibold text-[#14284b]">{s.title}</h3>
@@ -280,11 +180,9 @@ export default function App() {
 
         <section className="bg-[#14284b] py-24 text-white">
           <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#e9b98a]">Student story</p>
-            <blockquote className="mt-6 text-3xl leading-snug sm:text-4xl" style={serif}>
-              “This student first came to me because math was the weak spot. After two years of steady work: straight A's in high school, and admission to Northeastern University — with a plan for medical school.”
-            </blockquote>
-            <p className="mt-6 text-white/70">We focused on math and science, built steady study habits, and planned ahead instead of cramming.</p>
+            <p className={eyebrowLight}>{c.story.eyebrow}</p>
+            <blockquote className="mt-6 text-3xl leading-snug sm:text-4xl" style={serif}>“{c.story.quote}”</blockquote>
+            <p className="mt-6 text-white/70">{c.story.note}</p>
           </div>
         </section>
 
@@ -292,16 +190,16 @@ export default function App() {
           <div className="grid gap-12 rounded-[2rem] bg-white p-8 shadow-sm sm:p-12 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
               <img src="/images/portrait.jpg" alt="David Cho" loading="lazy" className="h-32 w-32 rounded-full object-cover object-top" />
-              <p className="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">About David Cho</p>
-              <h2 className="mt-4 text-3xl leading-snug tracking-tight text-[#14284b] sm:text-4xl" style={serif}>30 years of helping students get better at math.</h2>
-              <p className="mt-4 leading-8 text-slate-600">In public school classrooms, on college campuses, and one-on-one.</p>
+              <p className={`mt-8 ${eyebrow}`}>{c.about.eyebrow}</p>
+              <h2 className="mt-4 text-3xl leading-snug tracking-tight text-[#14284b] sm:text-4xl" style={serif}>{c.about.title}</h2>
+              <p className="mt-4 leading-8 text-slate-600">{c.about.text}</p>
             </div>
             <ol className="relative border-l-2 border-[#b5651d]/20 pl-8">
-              {career.map((c) => (
-                <li key={c.k} className="relative pb-7 last:pb-0">
+              {c.about.career.map((x) => (
+                <li key={x.k} className="relative pb-7 last:pb-0">
                   <span className="absolute -left-[2.45rem] top-1.5 h-3 w-3 rounded-full bg-[#b5651d]" />
-                  <p className="text-lg font-semibold text-[#14284b]">{c.k}</p>
-                  <p className="mt-1 leading-7 text-slate-600">{c.v}</p>
+                  <p className="text-lg font-semibold text-[#14284b]">{x.k}</p>
+                  <p className="mt-1 leading-7 text-slate-600">{x.v}</p>
                 </li>
               ))}
             </ol>
@@ -309,45 +207,30 @@ export default function App() {
         </section>
 
         <section className="mx-auto max-w-6xl px-4 pt-24 sm:px-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">What families say</p>
-          <h2 className="mt-4 text-4xl tracking-tight text-[#14284b]" style={serif}>From our Google reviews</h2>
+          <p className={eyebrow}>{c.reviewsBlock.eyebrow}</p>
+          <h2 className="mt-4 text-4xl tracking-tight text-[#14284b]" style={serif}>{c.reviewsBlock.title}</h2>
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {reviews.map((r) => (
               <figure key={r.who} className="flex flex-col justify-between rounded-3xl border border-black/5 bg-white p-8">
                 <div>
-                  <p className="text-[#e0a100]" aria-label="5 out of 5 stars">★★★★★</p>
-                  <blockquote className="mt-4 space-y-4 text-lg leading-8 text-slate-700">
+                  <p className="text-[#e0a100]" aria-label={c.reviewsBlock.stars}>★★★★★</p>
+                  <blockquote lang="en" className="mt-4 space-y-4 text-lg leading-8 text-slate-700">
                     {r.text.map((t) => <p key={t}>“{t}”</p>)}
                   </blockquote>
                 </div>
-                <figcaption className="mt-6 text-sm text-slate-500"><span className="font-semibold text-[#14284b]">{r.who}</span> · {r.role} · Google review</figcaption>
+                <figcaption className="mt-6 text-sm text-slate-500"><span className="font-semibold text-[#14284b]">{r.who}</span> · {c.roles[r.role] || r.role} · {c.reviewsBlock.label}</figcaption>
               </figure>
             ))}
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-4 pt-24 sm:px-6" lang="ko">
-          <div className="rounded-[2rem] border border-[#b5651d]/20 bg-white p-8 sm:p-12">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">학부모님께</p>
-            <h2 className="mt-4 text-3xl leading-snug tracking-tight text-[#14284b] sm:text-4xl">상담과 진행 보고는 한국어로 편하게 하실 수 있습니다.</h2>
-            <div className="mt-6 grid gap-6 text-base leading-8 text-slate-600 md:grid-cols-2 lg:grid-cols-3">
-              <p><span className="font-semibold text-[#14284b]">미국 정교사 자격</span><br />Iowa Standard Teaching License — 수학(K–8, 5–12) 및 영어학습자(K–12) 과목 인증.</p>
-              <p><span className="font-semibold text-[#14284b]">학교 수학과 SAT를 한 번에</span><br />학교 수업을 도와드리면서 그 내용이 SAT에서 어떻게 나오는지 함께 가르칩니다. 평소 학교 수학을 탄탄히 다진 학생은 SAT를 위해 따로 처음부터 공부할 부담이 크게 줄어듭니다.</p>
-              <p><span className="font-semibold text-[#14284b]">영어가 부족한 학생도 미리 준비</span><br />문장제, SAT, AP 서술형에서 점수가 깎이는 이유가 영어 표현인 경우가 많습니다. 영어학습자(ELL) 정교사 자격으로 수학과 영어를 함께 잡아 미리 준비시킵니다.</p>
-              <p><span className="font-semibold text-[#14284b]">수학만이 아니라 학생을 압니다</span><br />입시 컨설팅과 수많은 학생을 지도한 경험으로, 성적이 멈춘 이유가 실력인지 마음인지 알아보고 스스로 공부하고 싶게 만듭니다.</p>
-              <p><span className="font-semibold text-[#14284b]">수업은 영어, 상담은 한국어</span><br />수업은 학교와 같은 영어로, 학부모님 상담과 진행 보고는 한국어로 드립니다.</p>
-            </div>
-            <KakaoButton className="mt-8">카카오톡으로 한국어 상담하기</KakaoButton>
-          </div>
-        </section>
-
         <section id="faq" className="scroll-mt-20 mx-auto grid max-w-6xl gap-12 px-4 py-24 sm:px-6 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">FAQ</p>
-            <h2 className="mt-4 text-4xl tracking-tight text-[#14284b]" style={serif}>Questions parents ask</h2>
+            <p className={eyebrow}>{c.faq.eyebrow}</p>
+            <h2 className="mt-4 text-4xl tracking-tight text-[#14284b]" style={serif}>{c.faq.title}</h2>
           </div>
           <div className="divide-y divide-black/10 border-y border-black/10">
-            {faqs.map((f) => (
+            {c.faq.items.map((f) => (
               <details key={f.q} className="group py-5">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-[#14284b]">
                   {f.q}
@@ -363,13 +246,13 @@ export default function App() {
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 overflow-hidden rounded-[2rem] bg-white p-10 text-center shadow-sm sm:p-14 lg:flex-row lg:text-left">
             <img src="/images/portrait.jpg" alt="David Cho" loading="lazy" className="h-40 w-40 flex-none rounded-full object-cover object-top" />
             <div className="flex-1">
-              <h2 className="text-3xl tracking-tight text-[#14284b] sm:text-4xl" style={serif}>Find the gap before it gets bigger.</h2>
-              <p className="mt-3 text-lg leading-8 text-slate-600">The Math Gap Diagnosis is free: 30 minutes with your student, then a short written report. I teach a limited number of students each semester.</p>
-              <p className="mt-3 text-sm text-slate-500">Email <a href={CONTACT_URL} className="font-semibold text-[#14284b] underline underline-offset-4">{CONTACT_EMAIL}</a> · {HOURS}</p>
+              <h2 className="text-3xl tracking-tight text-[#14284b] sm:text-4xl" style={serif}>{c.final.title}</h2>
+              <p className="mt-3 text-lg leading-8 text-slate-600">{c.final.text}</p>
+              <p className="mt-3 text-sm text-slate-500">{c.final.emailLabel} <a href={href} className="font-semibold text-[#14284b] underline underline-offset-4">{CONTACT_EMAIL}</a> · {c.hours}</p>
             </div>
             <div className="flex flex-none flex-col gap-3">
-              <Cta />
-              <KakaoButton />
+              {c.kakao && <KakaoButton />}
+              <Cta href={href}>{c.cta}</Cta>
             </div>
           </div>
         </section>
@@ -377,7 +260,7 @@ export default function App() {
 
       <footer className="border-t border-black/5 bg-[#f7f6f2]">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-10 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <p><span className="font-semibold text-[#14284b]" style={serif}>IMT Academy</span> · 1:1 Online Math Tutoring</p>
+          <p><span className="font-semibold text-[#14284b]" style={serif}>IMT Academy</span> · {c.footerTag}</p>
           <p>© {new Date().getFullYear()} IMT Academy LLC · Virginia, USA</p>
         </div>
       </footer>
