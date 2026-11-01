@@ -54,7 +54,7 @@ const steps = [
 const reasons = [
   { title: "School math and SAT, taught together", text: "I know how school teachers grade and how SAT questions are built. Students who get help with their school math learn to apply it the way the SAT asks, so SAT prep isn't a separate mountain to climb later." },
   { title: "Diagnosis before drilling", text: "More worksheets don't fix a missing foundation. I find the real reason a student is stuck, then fix that first." },
-  { title: "Math is where college plans are won or lost", text: "The right course sequence, AP choices, and grades that hold up in the 11th-grade AP year. Having guided students to Top 30 universities, I plan math with college in mind." },
+  { title: "I know students, not just math", text: "After years of admissions advising and working with many students, I know what's behind a stalled student — fear of failing, burnout, or not seeing the point. I help students want to work, and I plan their math with college in mind." },
   { title: "Ready for English-heavy math", text: "As a licensed English Language Learner teacher (K–12), I can spot when a student is stuck on the wording, not the math. Korean students still building academic English can get ready early for word problems, AP free response, and the SAT." },
 ];
 
@@ -128,8 +128,8 @@ const faqs = [
   { q: "Are lessons online?", a: "Yes. All lessons are live 1:1 sessions on Zoom with screen sharing, so students anywhere in the U.S. can join from home." },
   { q: "When are lessons available?", a: "Weekday evenings 6–10 PM Eastern Time, plus weekend mornings and afternoons. We set a regular weekly time after the free diagnosis." },
   { q: "How long is each lesson?", a: "Most lessons are 60 or 90 minutes. For AP and SAT students, 90 minutes usually works best." },
-  { q: "How much does tutoring cost?", a: "Lessons start at $150/hour, and SAT Math and AP courses are $180/hour. After the free diagnosis, I'll send a plan with the exact schedule and pricing." },
-  { q: "How soon will we see results?", a: "It depends on the gap. Middle school students often improve within about 3 weeks. High school students with gaps built up over years may take a few months. After the free diagnosis, I'll give you a realistic timeline." },
+  { q: "How much does tutoring cost?", a: "Lessons are purchased as hour packages, and larger packages bring the hourly rate down. Pricing depends on your student's grade, course, and how often we meet. After the free diagnosis, I'll send a plan with the exact schedule and package options." },
+  { q: "How soon will we see results?", a: "It depends on the student and the size of the gap. After the free diagnosis, I'll give you a realistic timeline for your student." },
   { q: "How often should my student meet?", a: "Most students meet once or twice a week. Before an SAT or AP exam, we may meet more often for a short period." },
   { q: "Who teaches the lessons?", a: "I do. Every lesson is taught by David Cho personally — a licensed math teacher (Iowa Standard License, Mathematics K–8 and 5–12) and former California public middle and high school math teacher." },
   { q: "Can I talk with you in Korean?", a: "Yes. Lessons are in English, and parent consultations and updates can be in English or Korean. 학부모 상담은 한국어로 가능합니다." },
@@ -179,7 +179,7 @@ export default function App() {
               In 30 years of teaching, every student who stayed with me improved. As a U.S. school math teacher and SAT instructor, I teach school math so students see how it shows up on the SAT — they build the problem-solving skills the test rewards while keeping up in class, and the scores follow. Students I've taught have gone on to Yale, Princeton, Stanford, UC Berkeley, UCLA, USC, and Northeastern.
             </p>
             <p className="mt-3 max-w-xl text-base leading-7 text-slate-500">
-              꾸준히 공부한 학생은 모두 성적이 올랐습니다. 중학생은 보통 3주 안에, 그동안 쌓인 공백이 큰 고등학생은 몇 달이 걸리기도 합니다. 학교에서 배우는 내용이 SAT에서 어떻게 응용되는지 수업 속에서 연결해 주기 때문에, 점수는 그 결과로 따라옵니다. 학부모 상담은 한국어로 가능합니다.
+              꾸준히 공부한 학생은 모두 성적이 올랐습니다. 학교에서 배우는 내용이 SAT에서 어떻게 응용되는지 수업 속에서 연결해 주기 때문에, 점수는 그 결과로 따라옵니다. 학부모 상담은 한국어로 가능합니다.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Cta />
@@ -330,10 +330,11 @@ export default function App() {
           <div className="rounded-[2rem] border border-[#b5651d]/20 bg-white p-8 sm:p-12">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">학부모님께</p>
             <h2 className="mt-4 text-3xl leading-snug tracking-tight text-[#14284b] sm:text-4xl">상담과 진행 보고는 한국어로 편하게 하실 수 있습니다.</h2>
-            <div className="mt-6 grid gap-6 text-base leading-8 text-slate-600 md:grid-cols-2">
+            <div className="mt-6 grid gap-6 text-base leading-8 text-slate-600 md:grid-cols-2 lg:grid-cols-3">
               <p><span className="font-semibold text-[#14284b]">미국 정교사 자격</span><br />Iowa Standard Teaching License — 수학(K–8, 5–12) 및 영어학습자(K–12) 과목 인증.</p>
               <p><span className="font-semibold text-[#14284b]">학교 수학과 SAT를 한 번에</span><br />학교 수업을 도와드리면서 그 내용이 SAT에서 어떻게 나오는지 함께 가르칩니다. 평소 학교 수학을 탄탄히 다진 학생은 SAT를 위해 따로 처음부터 공부할 부담이 크게 줄어듭니다.</p>
               <p><span className="font-semibold text-[#14284b]">영어가 부족한 학생도 미리 준비</span><br />문장제, SAT, AP 서술형에서 점수가 깎이는 이유가 영어 표현인 경우가 많습니다. 영어학습자(ELL) 정교사 자격으로 수학과 영어를 함께 잡아 미리 준비시킵니다.</p>
+              <p><span className="font-semibold text-[#14284b]">수학만이 아니라 학생을 압니다</span><br />입시 컨설팅과 수많은 학생을 지도한 경험으로, 성적이 멈춘 이유가 실력인지 마음인지 알아보고 스스로 공부하고 싶게 만듭니다.</p>
               <p><span className="font-semibold text-[#14284b]">수업은 영어, 상담은 한국어</span><br />수업은 학교와 같은 영어로, 학부모님 상담과 진행 보고는 한국어로 드립니다.</p>
             </div>
             <KakaoButton className="mt-8">카카오톡으로 한국어 상담하기</KakaoButton>
