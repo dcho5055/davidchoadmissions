@@ -29,14 +29,14 @@ function Icon({ name, className = "h-5 w-5" }) {
 }
 
 const credentials = [
-  { k: "30 years", v: "Not one student whose grades didn't improve" },
-  { k: "Near 800", v: "Where most of my SAT Math students finish" },
+  { k: "30 years", v: "Every student who stayed with me improved" },
+  { k: "School + SAT", v: "Classroom math and SAT taught as one connected skill" },
   { k: "12 years", v: "Top 30 college admits, every year, from the learning center I ran" },
   { k: "Licensed", v: "U.S. teacher — Mathematics K–12 & English Language Learner K–12" },
 ];
 
 const courses = [
-  { name: "SAT Math", level: "Grades 9–12", text: "Question-type strategy, timing, and targeted practice for the Digital SAT." },
+  { name: "SAT Math", level: "Grades 9–12", text: "Real understanding of every question type, so students can handle problems they've never seen — and the score rises with it." },
   { name: "AP Calculus AB / BC", level: "Grades 11–12", text: "Concepts first, then exam-style multiple choice and free-response writing." },
   { name: "AP Precalculus · Precalculus", level: "Grades 10–12", text: "Functions, trigonometry, and the habits students need before calculus — including AP Precalculus exam prep." },
   { name: "AP Statistics", level: "Grades 10–12", text: "Data, probability, and inference explained clearly, with practice on AP-style free-response questions." },
@@ -52,10 +52,10 @@ const steps = [
 ];
 
 const reasons = [
-  { title: "Certified in math and in English learning", text: "I hold U.S. state licenses in both Mathematics (K–12) and English Language Learners (K–12). When a student is stuck on the wording, not the math, I can see it and teach both." },
+  { title: "School math and SAT, taught together", text: "I know how school teachers grade and how SAT questions are built. Students who get help with their school math learn to apply it the way the SAT asks, so SAT prep isn't a separate mountain to climb later." },
   { title: "Diagnosis before drilling", text: "More worksheets don't fix a missing foundation. I find the real reason a student is stuck, then fix that first." },
   { title: "Math is where college plans are won or lost", text: "The right course sequence, AP choices, and grades that hold up in the 11th-grade AP year. Having guided students to Top 30 universities, I plan math with college in mind." },
-  { title: "One teacher who knows U.S. classrooms", text: "I taught math in California public middle and high schools, so I know how teachers grade and how tests are written. Parent updates in English or Korean." },
+  { title: "Ready for English-heavy math", text: "As a licensed English Language Learner teacher (K–12), I can spot when a student is stuck on the wording, not the math. Korean students still building academic English can get ready early for word problems, AP free response, and the SAT." },
 ];
 
 const signs = [
@@ -129,6 +129,7 @@ const faqs = [
   { q: "When are lessons available?", a: "Weekday evenings 6–10 PM Eastern Time, plus weekend mornings and afternoons. We set a regular weekly time after the free diagnosis." },
   { q: "How long is each lesson?", a: "Most lessons are 60 or 90 minutes. For AP and SAT students, 90 minutes usually works best." },
   { q: "How much does tutoring cost?", a: "Lessons start at $150/hour, and SAT Math and AP courses are $180/hour. After the free diagnosis, I'll send a plan with the exact schedule and pricing." },
+  { q: "How soon will we see results?", a: "It depends on the gap. Middle school students often improve within about 3 weeks. High school students with gaps built up over years may take a few months. After the free diagnosis, I'll give you a realistic timeline." },
   { q: "How often should my student meet?", a: "Most students meet once or twice a week. Before an SAT or AP exam, we may meet more often for a short period." },
   { q: "Who teaches the lessons?", a: "I do. Every lesson is taught by David Cho personally — a licensed math teacher (Iowa Standard License, Mathematics K–8 and 5–12) and former California public middle and high school math teacher." },
   { q: "Can I talk with you in Korean?", a: "Yes. Lessons are in English, and parent consultations and updates can be in English or Korean. 학부모 상담은 한국어로 가능합니다." },
@@ -175,10 +176,10 @@ export default function App() {
               Every student improves.<br />Some just take longer.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-              In 30 years of teaching, I haven't had a student whose grades didn't go up. Most of my SAT Math students finish near 800. Students I've taught have gone on to Yale, Princeton, Stanford, UC Berkeley, UCLA, USC, and Northeastern.
+              In 30 years of teaching, every student who stayed with me improved. As a U.S. school math teacher and SAT instructor, I teach school math so students see how it shows up on the SAT — they build the problem-solving skills the test rewards while keeping up in class, and the scores follow. Students I've taught have gone on to Yale, Princeton, Stanford, UC Berkeley, UCLA, USC, and Northeastern.
             </p>
             <p className="mt-3 max-w-xl text-base leading-7 text-slate-500">
-              30년 동안 성적이 오르지 않은 학생은 없었습니다. 시간이 더 걸린 학생이 있었을 뿐입니다. 학부모 상담은 한국어로 가능합니다.
+              꾸준히 공부한 학생은 모두 성적이 올랐습니다. 중학생은 보통 3주 안에, 그동안 쌓인 공백이 큰 고등학생은 몇 달이 걸리기도 합니다. 학교에서 배우는 내용이 SAT에서 어떻게 응용되는지 수업 속에서 연결해 주기 때문에, 점수는 그 결과로 따라옵니다. 학부모 상담은 한국어로 가능합니다.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Cta />
@@ -329,9 +330,10 @@ export default function App() {
           <div className="rounded-[2rem] border border-[#b5651d]/20 bg-white p-8 sm:p-12">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b5651d]">학부모님께</p>
             <h2 className="mt-4 text-3xl leading-snug tracking-tight text-[#14284b] sm:text-4xl">상담과 진행 보고는 한국어로 편하게 하실 수 있습니다.</h2>
-            <div className="mt-6 grid gap-6 text-base leading-8 text-slate-600 md:grid-cols-3">
+            <div className="mt-6 grid gap-6 text-base leading-8 text-slate-600 md:grid-cols-2">
               <p><span className="font-semibold text-[#14284b]">미국 정교사 자격</span><br />Iowa Standard Teaching License — 수학(K–8, 5–12) 및 영어학습자(K–12) 과목 인증.</p>
-              <p><span className="font-semibold text-[#14284b]">수학이 아니라 영어에서 막힐 때</span><br />문장제, SAT, AP 서술형에서 점수가 깎이는 이유가 영어 표현인 경우가 많습니다. 수학과 ELL 자격으로 둘 다 잡습니다.</p>
+              <p><span className="font-semibold text-[#14284b]">학교 수학과 SAT를 한 번에</span><br />학교 수업을 도와드리면서 그 내용이 SAT에서 어떻게 나오는지 함께 가르칩니다. 평소 학교 수학을 탄탄히 다진 학생은 SAT를 위해 따로 처음부터 공부할 부담이 크게 줄어듭니다.</p>
+              <p><span className="font-semibold text-[#14284b]">영어가 부족한 학생도 미리 준비</span><br />문장제, SAT, AP 서술형에서 점수가 깎이는 이유가 영어 표현인 경우가 많습니다. 영어학습자(ELL) 정교사 자격으로 수학과 영어를 함께 잡아 미리 준비시킵니다.</p>
               <p><span className="font-semibold text-[#14284b]">수업은 영어, 상담은 한국어</span><br />수업은 학교와 같은 영어로, 학부모님 상담과 진행 보고는 한국어로 드립니다.</p>
             </div>
             <KakaoButton className="mt-8">카카오톡으로 한국어 상담하기</KakaoButton>
