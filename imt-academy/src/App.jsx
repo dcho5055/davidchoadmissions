@@ -130,7 +130,7 @@ const faqs = [
   { q: "How long is each lesson?", a: "Most lessons are 60 or 90 minutes. For AP and SAT students, 90 minutes usually works best." },
   { q: "How much does tutoring cost?", a: "Lessons are purchased as hour packages, and larger packages bring the hourly rate down. Pricing depends on your student's grade, course, and how often we meet. After the free diagnosis, I'll send a plan with the exact schedule and package options." },
   { q: "How soon will we see results?", a: "It depends on the student and the size of the gap. After the free diagnosis, I'll give you a realistic timeline for your student." },
-  { q: "How often should my student meet?", a: "Most students meet once or twice a week. Before an SAT or AP exam, we may meet more often for a short period." },
+  { q: "How often should my student meet?", a: "Most students start with one lesson a week. Before an SAT or AP exam, we may add sessions for a short period." },
   { q: "Who teaches the lessons?", a: "I do. Every lesson is taught by David Cho personally — a licensed math teacher (Iowa Standard License, Mathematics K–8 and 5–12) and former California public middle and high school math teacher." },
   { q: "Can I talk with you in Korean?", a: "Yes. Lessons are in English, and parent consultations and updates can be in English or Korean. 학부모 상담은 한국어로 가능합니다." },
 ];
